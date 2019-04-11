@@ -1,0 +1,78 @@
+h1 {
+    color: rgb(252, 252, 252);
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    color: rgb(252, 252, 252);
+    font-size: 20px;
+    text-align: center;
+}
+#login{
+    background-color: #791a1a;
+    width: 30%;
+    position: relative;
+    left:35%;
+    right: 35%;
+    top: 5em;
+    border-style: double;
+    border-color:  #791a1a;
+}
+#dados_principal{
+    height: 16em;
+    background-color: rgb(196, 196, 196);
+}
+
+#campos {
+    font-size: 24px;
+    height: 6em;
+    width: 60%;
+    position: relative;
+    top: 3em;
+    bottom: 10em; 
+    left: 20%;
+    right: 20%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#campos input {
+    position: absolute;
+    right: 0;
+    width:270px;
+    height: 28px;
+}
+
+#botao{
+    position: relative;
+    top: 50px;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    height: 35px;
+    font-size: 25px;
+    background-color: #791a1a;
+    border-style: double;
+    border-color:  black;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+#rodape{
+    position: absolute;
+    bottom: 0%;
+    background-color: #791a1a;
+    width: 100%;
+    position: absolute;
+    right: 0%;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+
+#textoRodape{
+    position: relative;
+    top: 5px;
+    bottom: 5px;
+    position: absolute;
+    right: 0px; 
+}
