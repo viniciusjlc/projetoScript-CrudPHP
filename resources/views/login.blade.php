@@ -10,26 +10,26 @@
 </head>
 
 <body>
-    <div id="login">
+    <div id="grid_login">
         <h1>Carlos Hairs Style</h1>
         <h2>LOGIN</h2>
-        <div id="dados_principal">
+        <div id="panel_dadosLogin">
             <form action="{{route('login.logar')}}" method="POST">
                 @csrf
-                <div id="campos">
-                    <label class="textoCampos">E-mail: </label>
+                <div id="campos_login">
+                    <label>E-mail: </label>
                     <br/>
-                    <input type="email" class="form-control" name="email" id="campo-email"/>
+                    <input type="email" name="email" id="campo-email"/>
                     <br/>
-                    <label class="textoCampos">Senha: </label>
+                    <label>Senha: </label>
                     <br/>
-                    <input type="password" class="form-control" name="senha" id="campo-senha"/>
+                    <input type="password" name="senha" id="campo-senha"/>
                     <div>   
-                        <button type="submit" class="botao-cor botao-login">Logar</button>
+                        <button type="submit" class="botao_cor botao_login">Logar</button>
                         
                         @if(!empty(session('erro')))
                         <!-- LOGIN ou SENHA INCORRETA -->
-                        <div class="alerta_senha">
+                        <div class="alerta_senhaLogin">
                             <strong>Erro!</strong> {{session('erro')}}
                         </div>
                         <!-- FIM [LOGIN OU SENHA INCORRETA] -->
