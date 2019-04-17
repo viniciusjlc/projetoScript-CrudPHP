@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('login', 'LoginController@abrirLogin')->name('login');
+
+Route::get('principal', 'MarcacaoController@abrirPaginaPrincipal')->name('principal');
+
+Route::post('logar', "LoginController@Logar")->name('login.logar');
+
+Route::get('/', "LoginController@abrirLogin")->name("home");
+
+Route::get('marcacao', 'MarcacaoController@abrirPaginaMarcacao')->name('marcacao');

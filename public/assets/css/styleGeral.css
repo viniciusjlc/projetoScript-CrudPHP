@@ -1,0 +1,36 @@
+body{
+    background-image:url('../img/imagemFundo.jpg') ;
+    margin: 0px;
+}
+
+#rodape{
+    position: absolute;
+    bottom: 0%;
+    background-color: #ca8e8e;
+    width: 100%;
+    position: absolute;
+    right: 0%;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+
+#textoRodape{
+    position: relative;
+    top: 5px;
+    bottom: 5px;
+    position: absolute;
+    right: 0px; 
+}
+
+h1 {
+    color: rgb(252, 252, 252);
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    color: rgb(252, 252, 252);
+    font-size: 20px;
+    text-align: center;
+}

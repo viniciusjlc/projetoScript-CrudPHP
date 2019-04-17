@@ -3,13 +3,8 @@
     <title>Carlos Hairs Style - Menu</title>
     <meta charset="utf-8"/>
     
-    <link rel="stylesheet" href="styleMenuPrincipal.css">
-    
-    <style>
-        body{
-            background-image:url(https://us.123rf.com/450wm/lux100/lux1001607/lux100160700114/60055497-personal-care-seamless-pattern-on-white-background-wallpaper-with-hygiene-and-hair-salon-elements.jpg?ver=6) ;
-        }
-    </style>
+    <link rel="stylesheet" href="{{url('assets\css\styleMenuPrincipal.css')}}">
+    <link rel="stylesheet" href="{{url('assets\css\styleGeral.css')}}">
     
 </head>
 
@@ -20,7 +15,7 @@
     <div id="menuSuperior">
         <ul > 
             <li class="itemMenuSuperior">
-                <a class="textoMenuSuperior" href="marcacao.html">Marcações</a>
+                <a class="textoMenuSuperior" href="{{route('marcacao')}}">Marcações</a>
             </li>
             <li class="itemMenuSuperior">
                 <a class="textoMenuSuperior" href="#">Funcionários</a>

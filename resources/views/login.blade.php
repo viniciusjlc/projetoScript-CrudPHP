@@ -3,14 +3,9 @@
     <title>Carlos Hairs Style  - Login</title>
     <meta charset="utf-8"/>
     
-    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="{{url('assets\css\styleLogin.css')}}">
+    <link rel="stylesheet" href="{{url('assets\css\styleGeral.css')}}">
     
-    <style>
-        body{
-            background-image:url(https://us.123rf.com/450wm/lux100/lux1001607/lux100160700114/60055497-personal-care-seamless-pattern-on-white-background-wallpaper-with-hygiene-and-hair-salon-elements.jpg?ver=6) ;
-        }
-        
-    </style>
     
 </head>
 
@@ -19,22 +14,30 @@
         <h1>Carlos Hairs Style</h1>
         <h2>LOGIN</h2>
         <div id="dados_principal">
-            <form action="menuPrincipal.html" method="POST">
+            <form action="{{route('login.logar')}}" method="POST">
+                @csrf
                 <div id="campos">
-                    <div class="">
-                        <label>E-mail: </label>
-                        <input type="text"/>
-                    </div>
+                    <label class="textoCampos">E-mail: </label>
                     <br/>
-                    <div class="">
-                        <label>Senha: </label>
-                        <input type="password"/>
-                    </div>
-                </div>    
-                <div>
-                    <button type="submit" id="botao">Logar</button>
+                    <input type="email" class="form-control" name="email" id="campo-email"/>
+                    <br/>
+                    <label class="textoCampos">Senha: </label>
+                    <br/>
+                    <input type="password" class="form-control" name="senha" id="campo-senha"/>
+                    <div>   
+                        <button type="submit" class="botao-cor botao-login">Logar</button>
+                        
+                        @if(!empty(session('erro')))
+                        <!-- LOGIN ou SENHA INCORRETA -->
+                        <div class="alerta_senha">
+                            <strong>Erro!</strong> {{session('erro')}}
+                        </div>
+                        <!-- FIM [LOGIN OU SENHA INCORRETA] -->
+                        @endif
+                        
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <footer id="rodape">
