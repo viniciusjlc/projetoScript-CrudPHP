@@ -13,7 +13,7 @@
 
 Route::get('login', 'LoginController@abrirLogin')->name('login');
 
-Route::get('principal', 'MarcacaoController@abrirPaginaPrincipal')->name('principal');
+Route::get('principal', 'MarcacaoController@listar')->name('principal');
 
 Route::post('logar', "LoginController@Logar")->name('login.logar');
 

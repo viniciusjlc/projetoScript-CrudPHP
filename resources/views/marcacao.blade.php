@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Carlos Hairs Style - Menu</title>
+    <title>Mozart Hairs Style - Menu</title>
     <meta charset="utf-8"/>
     
     <link rel="stylesheet" href="styleMarcacao.css">
@@ -20,7 +20,7 @@
 
 <body onLoad="setTimeout('redirecionarPagina()', 15000)">
     <header id="cabecalho">
-        <a href="menuPrincipal.html" id="textoCabecalho" onclick="">Carlos Hairs Style</a>
+        <a href="menuPrincipal.html" id="textoCabecalho" onclick="">Mozart Hairs Style</a>
     </header>
     <div id="menuSuperior">
         <ul > 
@@ -77,7 +77,7 @@
             </div>
         </div>
         <footer id="rodape">
-            <label id="textoRodape">|| Salão de Beleza Carlos Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@carloshair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
+            <label id="textoRodape">|| Salão de Beleza Mozart Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@carloshair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
         </footer>
     </body>
     </html>
