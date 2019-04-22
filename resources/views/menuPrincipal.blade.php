@@ -16,7 +16,7 @@
         <div class="dropdown">
             <button class="dropbtn">Cliente</button>
             <div class="dropdown-content">
-                <a href="#">Cadastrar</a>
+                <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
             </div>
         </div>
     </div>

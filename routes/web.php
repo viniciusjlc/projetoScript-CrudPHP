@@ -20,3 +20,6 @@ Route::post('logar', "LoginController@Logar")->name('login.logar');
 Route::get('/', "LoginController@abrirLogin")->name("home");
 
 Route::get('marcacao', 'MarcacaoController@abrirPaginaMarcacao')->name('marcacao');
+
+
+Route::get('cadastrarCliente', 'ClienteController@abrirCadastrarCliente')->name('cliente.cadastrar');

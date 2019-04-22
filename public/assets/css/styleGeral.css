@@ -172,6 +172,12 @@ h2 {
     border-color: #ca8e8e;
 }
     
+#campos-cadastroCliente{
+    width: 10%;
+    position: relative;
+    left: 10%;
+    height: 50px;
+}
 
 .itemMenuSuperior{
     position: relative;
@@ -234,6 +240,17 @@ h2 {
     right: 5%;
     height: 35px;
     font-size: 25px;
+}
+
+.cadastroCliente-inputText{
+    width: 800%;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.cadastroCliente-inputSelectMenu{
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 table.marcacaoTable {
