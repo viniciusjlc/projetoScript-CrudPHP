@@ -12,7 +12,6 @@
 <body>
     <div id="grid_login">
         <h1>Mozart Hairs Style</h1>
-        <h2>LOGIN</h2>
         <div id="panel_dadosLogin">
             <form action="{{route('login.logar')}}" method="POST">
                 @csrf
@@ -41,7 +40,7 @@
         </div>
     </div>
     <footer id="rodape">
-        <label id="textoRodape">|| Salão de Beleza Mozart Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@carloshair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
+        <label id="textoRodape">|| Salão de Beleza Mozart Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@mozarthair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
     </footer>
 </body>
 </html>

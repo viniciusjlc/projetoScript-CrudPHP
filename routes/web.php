@@ -21,5 +21,8 @@ Route::get('/', "LoginController@abrirLogin")->name("home");
 
 Route::get('marcacao', 'MarcacaoController@abrirPaginaMarcacao')->name('marcacao');
 
-
 Route::get('cadastrarCliente', 'ClienteController@abrirCadastrarCliente')->name('cliente.cadastrar');
+
+Route::get('visualizarCliente', 'ClienteController@listarCliente')->name('cliente');
+
+Route::get('novo', 'ClienteController@novo')->name('cliente.novo');

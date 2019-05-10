@@ -1,5 +1,5 @@
 body{
-    background-image:url('../img/imagemFundo.jpg') ;
+    background-image:url('../img/back.png') ;
     margin: 0px;
 }
 
@@ -67,12 +67,19 @@ h2 {
     height: 22%;
 }
 
+.botao_abrir_modal_cadastro_cliente{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
 .botao_cor{
     background-color: #ca8e8e;
     border-style: double;
     border-color:  #8a6262;
     font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
+    border-radius: 20%;
 }
 
 .botao_login{
@@ -111,7 +118,9 @@ h2 {
   .dropdown {
     position: relative;
     width: 30%;
-    display: inline-block;
+    display: inline-block;   
+    height: inherit;
+    height: 100%;
   }
   
   .dropdown-content {
@@ -136,7 +145,7 @@ h2 {
   
   .dropdown:hover .dropbtn {background-color: #8a6262;}
 
-  #cabecalho{
+#cabecalho{
     position: absolute;
     top: 0%;
     background-color: #ca8e8e;
@@ -147,7 +156,7 @@ h2 {
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
-    
+    cursor: pointer;
 }
 
 #textocabecalho{
@@ -161,7 +170,9 @@ h2 {
     color: rgb(252, 252, 252);
     font-size: 40px;
     text-align: center;
+    cursor: pointer;
 }
+
 
 #menuSuperior {
     margin-top: 100px;
