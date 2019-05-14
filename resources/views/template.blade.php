@@ -12,11 +12,9 @@
 </head>
 <body>
     <!-- BARRA DE NAVEGAÇÃO -->
-    
-    <header id="cabecalho" onclick="window.location.href='{{route('principal')}}'">
-        <label id="textocabecalho">Mozart Hairs Style</label>
-    </header>
-    <div id="menuSuperior">
+    <header id="cabecalho">
+        {{-- <div class="dropdown-menu"> --}}
+        <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Mozart Hairs Style</label>
         <div class="dropdown">
             <button class="dropbtn">Cliente</button>
             <div class="dropdown-content">
@@ -24,7 +22,18 @@
                 <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
             </div>
         </div>
-    </div>
+        {{-- </div> --}}
+    </header>
+
+    <script>
+        $('.dropdown-menu').on('mouseover', () => {
+            console.log('teste');
+            //child
+            //toggle
+        });
+    </script>
+
+
     <!-- FIM BARRA DE NAVEGAÇÃO -->
     
     <div class="container">

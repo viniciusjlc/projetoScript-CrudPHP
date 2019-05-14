@@ -3,7 +3,7 @@
 @section('conteudo_principal')
 
 <div id="panelPrincipal">
-    <a id="tituloPanelPrincipal">Resumo do Salão:</a>
+    <h3 id="tituloPanelPrincipal">Resumo do Salão:</h3>
     <div id="tabelaResumoMarcacao">         
         
         <table class="marcacaoTable">
@@ -34,7 +34,7 @@
         </table>
         
     </div>
-    <a id="valorCaixa">Valor total em caixa: R$320,00</a>
+    <h3 id="valorCaixa">Valor total em caixa: R$320,00</h3>
     <button class="botaoFecharCaixa botao_cor ">Fechar o dia</button>
 </div>
 

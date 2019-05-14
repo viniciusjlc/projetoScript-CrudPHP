@@ -3,26 +3,24 @@
     <title>Mozart Hairs Style  - Login</title>
     <meta charset="utf-8"/>
     
-    <link rel="stylesheet" href="{{url('assets\css\styleLogin.css')}}">
     <link rel="stylesheet" href="{{url('assets\css\styleGeral.css')}}">
     
     
 </head>
 
 <body>
+    <h1 id="titulo_login">Mozart Hairs Style</h1>
     <div id="grid_login">
-        <h1>Mozart Hairs Style</h1>
+        <h2>Login</h2>
         <div id="panel_dadosLogin">
             <form action="{{route('login.logar')}}" method="POST">
                 @csrf
                 <div id="campos_login">
-                    <label>E-mail: </label>
                     <br/>
-                    <input type="email" name="email" id="campo-email"/>
+                    <input type="email" placeholder="E-mail" name="email" id="campo-email"/>
                     <br/>
-                    <label>Senha: </label>
                     <br/>
-                    <input type="password" name="senha" id="campo-senha"/>
+                    <input type="password" placeholder="Senha"  name="senha" id="campo-senha"/>
                     <div>   
                         <button type="submit" class="botao_cor botao_login">Logar</button>
                         
@@ -39,8 +37,8 @@
             </div>
         </div>
     </div>
-    <footer id="rodape">
+    <!--<footer id="rodape">
         <label id="textoRodape">|| Salão de Beleza Mozart Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@mozarthair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
-    </footer>
+    </footer>-->
 </body>
 </html>

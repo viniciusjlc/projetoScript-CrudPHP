@@ -4,67 +4,79 @@ body{
 }
 
 #rodape{
-    position: absolute;
-    bottom: 0%;
-    background-color: #ca8e8e;
+    bottom: 0.1%;
     width: 100%;
     position: absolute;
-    right: 0%;
+    left: 0%;
     height: 30px;
+    text-align: center;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: whitesmoke;
+}
+
+#titulo_login{
+    position: relative;
+    top: 10%;
+    width: 100%;
 }
 
 #textoRodape{
     position: relative;
     top: 5px;
     bottom: 5px;
-    position: absolute;
-    right: 0px; 
+    right: 0px;
 }
 
 h1 {
     color: rgb(252, 252, 252);
-    font-size: 30px;
+    font-size: 45px;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 h2 {
-    color: rgb(252, 252, 252);
-    font-size: 20px;
+    color:whitesmoke;
+    font-size: 30px;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 14px;
 }
 
 #grid_login{
-    background-color: #ca8e8e;
-    width: 30%;
+    width: 36%;
     position: relative;
-    left:35%;
-    right: 35%;
+    left: 32%;
+    right: 32%;
     top: 6em;
     border-style: double;
-    border-color:  #8a6262;
+    border-color: #0000002e;
+    border-radius: 20px;
 }
 
 #panel_dadosLogin{
     height: 15em;
-    background-color: rgb(246, 246, 246);
 }
 
 #campos_login {
     font-size: 24px;
     width: 80%;
     position: relative;    
-    top: 30px;
+    top: 15px;
     left: 10%;
     right: 10%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: whitesmoke;
 }
 
 #campos_login input {
     position: absolute;
     width: 100%;
-    height: 22%;
+    height: 30%;
+    border-style: double;
+    border-color: #52204e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
 }
 
 .botao_abrir_modal_cadastro_cliente{
@@ -74,12 +86,12 @@ h2 {
 }
 
 .botao_cor{
-    background-color: #ca8e8e;
+    background-color: #75376a;
     border-style: double;
-    border-color:  #8a6262;
-    font-family: 'Times New Roman', Times, serif;
+    border-color: #52204e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: whitesmoke;
-    border-radius: 20%;
+    border-radius: 14px;
 }
 
 .botao_login{
@@ -89,11 +101,11 @@ h2 {
     right: 20%;
     width: 60%;
     height: 35px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .botao_cor:hover{
-    background-color: #8a6262;
+    background-color: #52204e;
 }
 
 .alerta_senhaLogin{
@@ -106,13 +118,19 @@ h2 {
     text-align: center;
 }
 
+.dropdown, .dropup {
+    position: absolute !important;
+    right: 0% !important;
+}
+
 .dropbtn {
     background-color: #ca8e8e;
     color: white;
     height: 100%;
-    font-size: 16px;
+    font-size: 28px;
     width: 30%;
     border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .dropdown {
@@ -121,6 +139,7 @@ h2 {
     display: inline-block;   
     height: inherit;
     height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .dropdown-content {
@@ -139,7 +158,7 @@ h2 {
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #ddd;     text-decoration: black;}
   
   .dropdown:hover .dropdown-content {display: block;}
   
@@ -150,28 +169,23 @@ h2 {
     top: 0%;
     background-color: #ca8e8e;
     width: 100%;
-    position: absolute;
     right: 0%;
-    height: 100px;
+    height: 70px;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: whitesmoke;
     cursor: pointer;
 }
 
 #textocabecalho{
     position: relative;
-    top: 30px;
-    bottom: 30px;
-    width: 80%;
-    position: absolute;
+    top: 9px;
     left: 10%;
-    right: 10%;
     color: rgb(252, 252, 252);
     font-size: 40px;
     text-align: center;
     cursor: pointer;
-}
+  }
 
 
 #menuSuperior {
@@ -214,7 +228,7 @@ h2 {
 }
 
 #panelPrincipal{
-    margin-top: 50px;
+    margin-top: 100px;
     width: 80%;
     position: relative;
     right: 10%;
@@ -256,18 +270,18 @@ h2 {
 .cadastroCliente-inputText{
     width: 800%;
     font-size: 16px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .cadastroCliente-inputSelectMenu{
     font-size: 16px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 table.marcacaoTable {
     position: relative;
     left: 5%;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: 1px solid rgb(0, 0, 0);
     width: 90%;
     text-align: left;
