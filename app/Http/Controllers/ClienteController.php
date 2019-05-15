@@ -11,7 +11,7 @@ class ClienteController extends Controller
         return view("cadastrarCliente");
     }
     
-    public function listarCliente() {
+    public function abrirListarCliente() {
         $dados['clientes'] = [
             ['id' => 1, 'nome' => 'Cliente 1', 'email' => 'teste@gmail.com', 'telefone' => '111111111',  'sexo' => 1, 'idade' => '18'],
             ['id' => 2, 'nome' => 'Cliente 2', 'email' => 'gteste@mail.com', 'telefone' => '999999999',  'sexo' => 2, 'idade' => '21'],    

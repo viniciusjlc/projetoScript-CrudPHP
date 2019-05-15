@@ -19,7 +19,7 @@ class CriandoTabelaServicos extends Migration
             $table->interger('codCategoria');
             $table->interger('comissao');
             $table->float('preco');
-            $table->string('nome', 120);
+            $table->string('descricao', 120);
             $table->timestamps();
         });
     }
