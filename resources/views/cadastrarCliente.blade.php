@@ -12,7 +12,7 @@
         </div>
         @endif
 <div id="panelPrincipal">
-    <a id="tituloPanelPrincipal">Cadastrar Cliente</a>
+    <h3 id="tituloPanelPrincipal">Cadastrar Cliente</h3>
     
     <form action="{{route('cliente.novo')}}" method="get">
         @csrf
@@ -20,24 +20,29 @@
             
             <div class="class">
                 <label for="campo-nome">Nome:</label>
-                <input type="text" name="nome" value="{{old('nome')}}" id="campo-nome" class="cadastroCliente-inputText" >
+                <input type="text" maxlength="100" name="nome" value="{{old('nome')}}" id="campo-nome" class="cadastroCliente-inputText" >
             </div>
             
             <div class="form-group">
+                <label for="campo-idade">CPF:</label>
+                <input type="text"  maxlength="11" class="cadastroCliente-inputText" value="{{old('cpf')}}" name="cpf" id="campo-cpf">
+            </div>
+
+            <div class="form-group">
                 <label for="campo-email">Email:</label>
-                <input type="email" class="cadastroCliente-inputText" value="{{old('email')}}" name="email" id="campo-email">
+                <input type="email" maxlength="60" class="cadastroCliente-inputText" value="{{old('email')}}" name="email" id="campo-email">
             </div>
             
             <div class="form-group">
                 <label for="campo-telefone">Telefone:</label>
-                <input type="text" class="cadastroCliente-inputText" value="{{old('telefone')}}" name="telefone" id="campo-telefone">
+                <input type="text" maxlength="9" class="cadastroCliente-inputText" value="{{old('telefone')}}" name="telefone" id="campo-telefone">
             </div>
             
             <div class="form-group">
                 <label for="campo-sexo">Sexo:</label>
                 <select class="cadastroCliente-inputSelectMenu" name="sexo" id="campo-sexo">
-                    <option value="1">masculino</option>
-                    <option value="2">feminino</option>
+                    <option value="M">masculino</option>
+                    <option value="F">feminino</option>
                 </select>
             </div>
             
@@ -47,6 +52,7 @@
             </div>
             
             <button type="submit" class="btn btn-default">Cadastrar</button>	
+            <br clear="both"/>
         </div>			
     </form>
     

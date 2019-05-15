@@ -22,15 +22,26 @@
                 <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
             </div>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Funcionário</button>
+            <div class="dropdown-content">
+                <a href="{{route('cliente')}}">Visualizar Funcionário</a>
+                <a href="{{route('cliente.cadastrar')}}">Cadastrar Funcionário</a>
+            </div>
+        </div>
         {{-- </div> --}}
     </header>
 
     <script>
-        $('.dropdown-menu').on('mouseover', () => {
-            console.log('teste');
-            //child
-            //toggle
+        $(document).ready(function(){
+        $('.dropdown').bind('mouseover', function() {
+            $('div', this).show();
         });
+
+        $('.dropdown').bind('mouseleave', function() {
+            $('div', this).hide();
+        });
+    });
     </script>
 
 
@@ -41,10 +52,6 @@
         @yield('conteudo_principal')
         <!-- CONTEUDO PRINCIPAL [FIM] -->
     </div>
-    
-    <footer id="rodape">
-        <label id="textoRodape">|| Salão de Beleza Mozart Hairs Style || Endereço: Avenida Lurdes Vasconselos 2424 || Email: contato@mozarthair.com || Telefones: 98733-2347 ou 99106-3220 ||</label>
-    </footer>
     <br/>
 </body>
 </html>
