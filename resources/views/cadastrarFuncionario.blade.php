@@ -15,6 +15,15 @@
 <div id="form-cadastro">
     <form action="{{route('funcionario.novo')}}" method="get">
         @csrf      
+        
+        @if(!empty(session('erro')))
+        <!-- LOGIN ou SENHA INCORRETA -->
+        <div class="alerta_valoresConfirmar">
+            <strong>Erro!</strong> {{session('erro')}}
+        </div>
+        <!-- FIM [LOGIN OU SENHA INCORRETA] -->
+        @endif
+        
         <div class="class">
             <label for="campo-nome">Nome:</label>
             <input type="text" maxlength="100" name="nome" value="{{old('nome')}}" id="campo-nome" class="form-cadastro-inputText" >
@@ -27,23 +36,23 @@
         
         <div class="form-group">
             <label for="campo-login">Login:</label>
-            <input type="email" maxlength="40" class="form-cadastro-inputText" value="{{old('login')}}" name="login" id="campo-login">
+            <input type="text" maxlength="40" class="form-cadastro-inputText" value="{{old('login')}}" name="login" id="campo-login">
         </div>
         
         <div class="form-group">
             <label for="campo-email">Email:</label>
-            <input type="email" maxlength="60" class="form-cadastro-inputText" name="email" id="campo-email">
+            <input type="email" maxlength="60" class="form-cadastro-inputText" value="{{old('email')}}" name="email" id="campo-email">
         </div>
         
         <div class="form-group">
             <label for="campo-emailConfirmar">Confirmar Email:</label>
-            <input type="email" maxlength="60" class="form-cadastro-inputText" name="confirmarEmail" id="campo-emailConfirmar">
+            <input type="email" maxlength="60" class="form-cadastro-inputText" value="{{old('email')}}" name="confirmarEmail" id="campo-emailConfirmar">
         </div>
         
         <div class="form-group">
             <label for="campo-senha">Senha:</label>
             <input type="password" maxlength="40" class="form-cadastro-inputText" name="senha" id="campo-senha">
-        </div>
+        </div>     
         
         <div class="form-group">
             <label for="campo-senhaConfirmar">Confimar Senha:</label>
@@ -74,12 +83,12 @@
         </div>
         
         <div class="form-group">
-                <label for="campo-sexo">CATEGORIA:</label>
-                <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
-                    <option value="M">masculino</option>
-                    <option value="F">feminino</option>
-                </select>
-            </div>
+            <label for="campo-sexo">CATEGORIA:</label>
+            <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
+                <option value="M">masculino</option>
+                <option value="F">feminino</option>
+            </select>
+        </div>
         
         <button type="submit" class="btn btn-default">Cadastrar</button>	
         <br clear="both"/>

@@ -22,8 +22,6 @@ class CriandoTabelaClientes extends Migration
             $table->interger('idade');
             $table->enum('sexo', ['M', 'F']);
             $table->String('telefone',9);
-            $table->string('descCabelo', 200);
-            $table->string('descVisual', 200);
             $table->string('padraoCabelo', 200);
             $table->string('padraoVisual', 200);
             $table->timestamps();

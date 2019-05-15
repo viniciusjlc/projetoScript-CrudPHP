@@ -11,7 +11,7 @@
     </ul>
 </div>
 @endif
-<h3 id="tituloPanelPrincipal">Cadastrar Funcionario</h3>
+<h3 id="tituloPanelPrincipal">Cadastrar Serviço:</h3>
 <div id="form-cadastro">
     <form action="{{route('funcionario.novo')}}" method="get">
         @csrf      

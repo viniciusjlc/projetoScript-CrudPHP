@@ -116,11 +116,16 @@ h2 {
     color: red;
     position: absolute;
     left: 11%;
-    top: 100%;
+    top: 102%;
     width: 78%;
     font-size: 80%;
     text-align: center;
 }
+
+.alerta_valoresConfirmar{
+
+}
+
 
 .dropdown, .dropup {
     /* position: absolute !important; */

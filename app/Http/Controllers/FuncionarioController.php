@@ -32,8 +32,25 @@ class FuncionarioController extends Controller
              'idade'   => 'required|integer',
              'senha'   => 'required',
              'confirmarSenha' => 'required'
-             
         ]);
+
+        if($request->email!=$request->confirmarEmail){
+            return redirect()->route('funcionario.cadastrar')->with('erro', 'Confirme seu email corretamente');
+        }
+
+        if($request->senha!=$request->confirmarSenha){
+            return redirect()->route('funcionario.cadastrar')->with('erro', 'Confirme sua senha corretamente');
+        }
+
+        $Funcionario = new Funcionario;
+        $Funcionario->nome = $request->nome;
+        $Funcionario->cpf = $request->cpf;
+        $Funcionario->email = $request->email;
+        $Funcionario->telefone = $request->telefone;
+        $Funcionario->sexo = $request->sexo;
+        $Funcionario->idade = $request->idade;
+        $Funcionario->senha = $request->senha;
+        
         echo "Passou";
     }
 }
