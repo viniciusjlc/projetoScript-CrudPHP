@@ -74,9 +74,12 @@
         </div>
         
         <div class="form-group">
-            <label for="campo-descCabelo">FUNÇÃO:</label>
-            <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('descCabelo')}}" name="descCabelo" id="campo-descCabelo">
-        </div>
+                <label for="campo-sexo">CATEGORIA:</label>
+                <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
+                    <option value="M">masculino</option>
+                    <option value="F">feminino</option>
+                </select>
+            </div>
         
         <button type="submit" class="btn btn-default">Cadastrar</button>	
         <br clear="both"/>

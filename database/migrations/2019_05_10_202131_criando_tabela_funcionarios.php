@@ -24,8 +24,7 @@ class CriandoTabelaFuncionarios extends Migration
             $table->string('cpf', 11);
             $table->interger('idade');
             $table->enum('sexo', ['M', 'F']);
-            $table->String('telefone',9);
-            $table->interger('codFunc');
+            $table->String('telefone', 9);
             $table->interger('codCategoria');
             $table->timestamps();
         });

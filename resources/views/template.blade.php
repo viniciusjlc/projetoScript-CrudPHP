@@ -32,8 +32,8 @@
             <div class="dropdown">
                 <button class="dropbtn">Serviço</button>
                 <div class="dropdown-content">
-                    <a href="{{route('cliente')}}">Visualizar Serviço</a>
-                    <a href="{{route('cliente.cadastrar')}}">Cadastrar Serviço</a>
+                    <a href="{{route('servico')}}">Visualizar</a>
+                    <a href="{{route('servico.cadastrar')}}">Cadastrar</a>
                 </div>
             </div>
             <div class="dropdown">
