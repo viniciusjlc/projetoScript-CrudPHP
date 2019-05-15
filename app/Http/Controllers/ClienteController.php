@@ -22,6 +22,7 @@ class ClienteController extends Controller
     public function novo(Request $request){
         $request->validate([
             'nome'   => 'required',
+            'cpf'   => 'required',
             'email'   => 'required',
             'telefone'   => 'required|integer',
             'sexo'   => 'required',

@@ -14,44 +14,60 @@
     <!-- BARRA DE NAVEGAÇÃO -->
     <header id="cabecalho">
         {{-- <div class="dropdown-menu"> --}}
-        <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Mozart Hairs Style</label>
-        <div class="dropdown">
-            <button class="dropbtn">Cliente</button>
-            <div class="dropdown-content">
-                <a href="{{route('cliente')}}">Visualizar</a>
-                <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
+            <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Mozart Hairs Style</label>
+            <div class="dropdown">
+                <button class="dropbtn">Marcação</button>
+                <div class="dropdown-content">
+                    <a href="{{route('cliente')}}">Visualizar Marcação</a>
+                    <a href="{{route('cliente.cadastrar')}}">Cadastrar Marcação</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Funcionário</button>
+                <div class="dropdown-content">
+                    <a href="{{route('cliente')}}">Visualizar Funcionário</a>
+                    <a href="{{route('cliente.cadastrar')}}">Cadastrar Funcionário</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Serviço</button>
+                <div class="dropdown-content">
+                    <a href="{{route('cliente')}}">Visualizar Serviço</a>
+                    <a href="{{route('cliente.cadastrar')}}">Cadastrar Serviço</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Cliente</button>
+                <div class="dropdown-content">
+                    <a href="{{route('cliente')}}">Visualizar</a>
+                    <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
+                </div>
+            </div>
+            {{-- </div> --}}
+        </header>
+        
+        <script>
+            $(document).ready(function(){
+                $('.dropdown').bind('mouseover', function() {
+                    $('div', this).show();
+                });
+                
+                $('.dropdown').bind('mouseleave', function() {
+                    $('div', this).hide();
+                });
+            });
+        </script>
+        
+        <!-- FIM BARRA DE NAVEGAÇÃO -->
+        
+        <div class="container">
+            
+            <div class="panelPrincipal">
+                <!-- CONTEUDO PRINCIPAL [INICIO] -->
+                @yield('conteudo_principal')
+                <!-- CONTEUDO PRINCIPAL [FIM] -->
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Funcionário</button>
-            <div class="dropdown-content">
-                <a href="{{route('cliente')}}">Visualizar Funcionário</a>
-                <a href="{{route('cliente.cadastrar')}}">Cadastrar Funcionário</a>
-            </div>
-        </div>
-        {{-- </div> --}}
-    </header>
-
-    <script>
-        $(document).ready(function(){
-        $('.dropdown').bind('mouseover', function() {
-            $('div', this).show();
-        });
-
-        $('.dropdown').bind('mouseleave', function() {
-            $('div', this).hide();
-        });
-    });
-    </script>
-
-
-    <!-- FIM BARRA DE NAVEGAÇÃO -->
-    
-    <div class="container">
-        <!-- CONTEUDO PRINCIPAL [INICIO] -->
-        @yield('conteudo_principal')
-        <!-- CONTEUDO PRINCIPAL [FIM] -->
-    </div>
-    <br/>
-</body>
-</html>
+        <br/>
+    </body>
+    </html>
