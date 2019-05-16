@@ -7,10 +7,10 @@ use Illuminate\Database\Migrations\Migration;
 class CriandoTabelaServicos extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('servicos', function (Blueprint $table) {
@@ -23,12 +23,12 @@ class CriandoTabelaServicos extends Migration
             $table->timestamps();
         });
     }
-
+    
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('servicos');

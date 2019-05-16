@@ -9,11 +9,11 @@ class MarcacaoController extends Controller{
     public function abrirPaginaPrincipal(){
         return view("menuPrincipal");
     }
-
+    
     public function abrirListarMarcacao(){
         return view("visualizarMarcacao");
     }
-
+    
     public function listar() {
         $dados['marcacoes'] = [
             ['id' => 1, 'cliente' => 'Cliente 1', 'telefone' => '111111111', 'servico' => 'Servico 1', 'horario' => '12:01', 'dia' => '01/01/2019', 'funcionario' => 'Funcionario 1'],

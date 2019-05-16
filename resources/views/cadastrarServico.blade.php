@@ -33,11 +33,11 @@
             <label for="campo-preco">Preço:</label>
             <input type="number" class="form-cadastro-inputText" value="{{old('preco')}}" name="preco" id="campo-preco">
         </div>
-
+        
         <div class="form-group">
-                <label for="campo-comissao">Comissão:</label>
-                <input type="number" class="form-cadastro-inputText" value="{{old('comissao')}}" name="comissao" id="campo-comissao">
-            </div>
+            <label for="campo-comissao">Comissão:</label>
+            <input type="number" class="form-cadastro-inputText" value="{{old('comissao')}}" name="comissao" id="campo-comissao">
+        </div>
         
         <div class="form-group">
             <label for="campo-descricao">Descrição:</label>

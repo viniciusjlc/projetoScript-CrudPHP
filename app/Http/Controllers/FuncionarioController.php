@@ -33,6 +33,7 @@ class FuncionarioController extends Controller
                 'sexo'   => 'required',
                 'idade'   => 'required|integer',
                 'senha'   => 'required',
+                'endereco' => 'required',
                 'confirmarSenha' => [function ($att, $value, $fail) use ($request) {
                     if($value != $request->senha) $fail('Confirme sua senha corretamente');
                 }]
@@ -47,6 +48,7 @@ class FuncionarioController extends Controller
                 $Funcionario->sexo = $request->sexo;
                 $Funcionario->idade = $request->idade;
                 $Funcionario->senha = $request->senha;
+                $Funcionario->endereco = $request->endereco;
                 
                 echo "Passou";
             }

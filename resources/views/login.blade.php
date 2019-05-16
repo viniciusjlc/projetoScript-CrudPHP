@@ -22,12 +22,12 @@
                     <br/>
                     <input type="password" placeholder="Senha"  name="senha" id="campo-senha"/>
                     @if(!empty(session('erro')))
-                        <!-- LOGIN ou SENHA INCORRETA -->
-                        <div class="alerta_senhaLogin">
-                            <strong> {{session('erro')}} </strong>
-                        </div>
-                        <!-- FIM [LOGIN OU SENHA INCORRETA] -->
-                        @endif
+                    <!-- LOGIN ou SENHA INCORRETA -->
+                    <div class="alerta_senhaLogin">
+                        <strong> {{session('erro')}} </strong>
+                    </div>
+                    <!-- FIM [LOGIN OU SENHA INCORRETA] -->
+                    @endif
                     <div>   
                         <button type="submit" class="botao_cor botao_login">Logar</button>
                     </form>
