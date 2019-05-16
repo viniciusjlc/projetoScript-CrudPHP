@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MarcacaoController extends Controller
-{
+class MarcacaoController extends Controller{
     //
     public function abrirPaginaPrincipal(){
         return view("menuPrincipal");
     }
 
-    public function abrirPaginaMarcacao(){
-        return view("marcacao");
+    public function abrirListarMarcacao(){
+        return view("visualizarMarcacao");
     }
 
     public function listar() {

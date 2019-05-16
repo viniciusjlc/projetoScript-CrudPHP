@@ -122,11 +122,6 @@ h2 {
     text-align: center;
 }
 
-.alerta_valoresConfirmar{
-
-}
-
-
 .dropdown, .dropup {
     /* position: absolute !important; */
     right: 0% !important;
@@ -297,13 +292,12 @@ table.marcacaoTable {
     position: relative;
     left: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 1px solid rgb(0, 0, 0);
     width: 90%;
     text-align: left;
     border-collapse: collapse;
   }
   table.marcacaoTable td, table.marcacaoTable th {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid white;
     padding: 3px 2px;
   }
   table.marcacaoTable tbody td {

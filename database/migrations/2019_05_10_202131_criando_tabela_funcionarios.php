@@ -22,10 +22,10 @@ class CriandoTabelaFuncionarios extends Migration
             $table->string('email', 60);
             $table->string('endereco', 100);
             $table->string('cpf', 11);
-            $table->interger('idade');
+            $table->integer('idade');
             $table->enum('sexo', ['M', 'F']);
             $table->String('telefone', 9);
-            $table->interger('codCategoria');
+            $table->integer('codCategoria');
             $table->timestamps();
         });
     }

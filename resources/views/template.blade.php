@@ -3,22 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Hair Style</title>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="{{url('assets\css\styleGeral.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <!-- BARRA DE NAVEGAÇÃO -->
     <header id="cabecalho">
-        {{-- <div class="dropdown-menu"> --}}
+        
             <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Mozart Hairs Style</label>
             <div class="dropdown">
                 <button class="dropbtn">Marcação</button>
                 <div class="dropdown-content">
-                    <a href="{{route('cliente')}}">Visualizar Marcação</a>
+                    <a href="{{route('marcacao')}}">Visualizar</a>
                     <a href="{{route('cliente.cadastrar')}}">Cadastrar Marcação</a>
                 </div>
             </div>
@@ -43,7 +45,7 @@
                     <a href="{{route('cliente.cadastrar')}}">Cadastrar</a>
                 </div>
             </div>
-            {{-- </div> --}}
+            
         </header>
         
         <script>

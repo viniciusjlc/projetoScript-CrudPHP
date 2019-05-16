@@ -19,17 +19,30 @@ Route::get('principal', 'MarcacaoController@listar')->name('principal');
 Route::get('/', "LoginController@abrirLogin")->name("home");
 
 //CLIENTE:
-Route::get('cadastrarCliente', 'ClienteController@abrirCadastrar')->name('cliente.cadastrar');
-Route::get('visualizarCliente', 'ClienteController@abrirListarCliente')->name('cliente');
-Route::get('novoCliente', 'ClienteController@novo')->name('cliente.novo');
+Route::group(['prefix' => 'cliente'], function () {
+    Route::get('cadastrar', 'ClienteController@abrirCadastrar')->name('cliente.cadastrar');
+    Route::get('visualizar', 'ClienteController@abrirListarCliente')->name('cliente');
+    Route::get('novo', 'ClienteController@novo')->name('cliente.novo');
+});
 
 
 //FUNCIONARIO:
-Route::get('cadastrarFuncionario', 'FuncionarioController@abrirCadastrar')->name('funcionario.cadastrar');
-Route::get('visualizarFuncionario', 'FuncionarioController@abrirListarFuncionario')->name('funcionario');
-Route::get('novoFuncionario', 'FuncionarioController@novo')->name('funcionario.novo');
+Route::group(['prefix' => 'funcionario'], function () {
+    Route::get('cadastrar', 'FuncionarioController@abrirCadastrar')->name('funcionario.cadastrar');
+    Route::get('visualizar', 'FuncionarioController@abrirListarFuncionario')->name('funcionario');
+    Route::get('novo', 'FuncionarioController@novo')->name('funcionario.novo');
+});
 
 //SERVIÇO:
-Route::get('cadastrarServico', 'ServicoController@abrirCadastrar')->name('servico.cadastrar');
-Route::get('visualizarServico', 'ServicoController@abrirListarServico')->name('servico');
-Route::get('novoServico', 'ServicoController@novo')->name('servico.novo');
+Route::group(['prefix' => 'servico'], function () {
+    Route::get('cadastrar', 'ServicoController@abrirCadastrar')->name('servico.cadastrar');
+    Route::get('visualizar', 'ServicoController@abrirListarServico')->name('servico');
+    Route::get('novo', 'ServicoController@novo')->name('servico.novo');
+});
+
+//MARCAÇÃO:
+Route::group(['prefix' => 'marcacao'], function () {
+    Route::get('cadastrar', 'MarcacaoController@abrirMarcacao')->name('marcacao.cadastrar');
+    Route::get('visualizar', 'MarcacaoController@abrirListarMarcacao')->name('marcacao');
+    Route::get('novo', 'MarcacaoController@novo')->name('marcacao.novo');
+});

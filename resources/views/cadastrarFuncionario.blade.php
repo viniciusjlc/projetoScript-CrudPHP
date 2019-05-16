@@ -1,16 +1,5 @@
 @extends('template')
 
-
-@section('conteudo_principal')
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
 <h3 id="tituloPanelPrincipal">Cadastrar Funcionario</h3>
 <div id="form-cadastro">
     <form action="{{route('funcionario.novo')}}" method="get">
