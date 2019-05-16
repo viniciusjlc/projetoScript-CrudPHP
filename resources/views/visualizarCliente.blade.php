@@ -2,7 +2,13 @@
 
 @section('conteudo_principal')
 
-
+@if (session('msg'))
+<div class="alert alert-success">
+    <ul>
+        <li>{{session('msg')}}</li>
+    </ul>
+</div>
+@endif
 <h3 id="tituloPanelPrincipal">Clientes:</h3>
 <div class="tabela-visualizacao">                  
     <table class="padraoTable">
@@ -21,17 +27,23 @@
             </tr>
         </thead>
         <!-- DADOS -->
-        {{-- <tbody>
-            @foreach ($clientes as $cliente)
+        <tbody>
+            @foreach ($listaCliente as $clt)
             <tr>
-                <td>{{$cliente['nome']}}</td>
-                <td>{{$cliente['email']}}</td>
-                <td>{{$cliente['telefone']}}</td>
-                <td>{{$cliente['sexo']}}</td>
-                <td>{{$cliente['idade']}}</td>
+                <td>{{$clt->nome}}</td>
+                <td>{{$clt->cpf}}</td>
+                <td>{{$clt->email}}</td>
+                <td>{{$clt->telefone}}</td>
+                <td>{{$clt->sexo}}</td>
+                <td>{{$clt->idade}}</td>
+                <td>{{$clt->endereco}}</td>
+                <td>{{$clt->padraoCabelo}}</td>
+                <td>{{$clt->padraoVisual}}</td>
+                <td><button type="button" onclick="window.location.href='{{route('cliente.excluir', ['id'=>$clt->id])}}'" class="btn btn-default">Excluir</button></td>
+                
             </tr>	
             @endforeach	 
-        </tbody> --}}
+        </tbody> 
         <!-- DADOS [FIM] -->
     </table>
 </div>

@@ -7,42 +7,43 @@ use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
-    //
+    
     public function abrirCadastrar(){
         return view("cadastrarCliente");
     }
     
+    public function excluir($id){
+        $msg = "Cliente excluido com sucesso!";
+        Cliente::destroy($id);
+        return redirect()->route('cliente')->with("msg", $msg);
+    }
+    
     public function abrirListarCliente() {
-        // $dados['clientes'] = [
-            //     ['id' => 1, 'nome' => 'Cliente 1', 'email' => 'teste@gmail.com', 'telefone' => '111111111',  'sexo' => 1, 'idade' => '18'],
-            //     ['id' => 2, 'nome' => 'Cliente 2', 'email' => 'gteste@mail.com', 'telefone' => '999999999',  'sexo' => 2, 'idade' => '21'],    
-            // ];
-            // return view('visualizarCliente', $dados);
-            return view('visualizarCliente');
+        return view('visualizarCliente', ['listaCliente'=>Cliente::all()]);
+    }
+    
+    public function novo(Request $request){
+        $request->validate([
+            'nome'   => 'required',
+            'cpf'   => 'required',
+            'telefone'   => 'required|integer',
+            'sexo'   => 'required',
+            'idade'   => 'required|integer'
+            ]  );
+            
+            $Cliente = new Cliente;
+            $Cliente->nome = $request->nome;
+            $Cliente->cpf = $request->cpf;
+            $Cliente->email = $request->email;
+            $Cliente->telefone = $request->telefone;
+            $Cliente->sexo = $request->sexo;
+            $Cliente->idade = $request->idade;
+            $Cliente->endereco = $request->endereco;
+            $Cliente->padraoCabelo = $request->padraoCabelo;
+            $Cliente->padraoVisual = $request->padraoVisual;
+            $Cliente->save();
+            
+            return redirect()->route('cliente');
         }
-        
-        public function novo(Request $request){
-            $request->validate([
-                'nome'   => 'required',
-                'cpf'   => 'required',
-                'telefone'   => 'required|integer',
-                'sexo'   => 'required',
-                'idade'   => 'required|integer'
-                ]  );
-                
-                $Cliente = new Cliente;
-                $Cliente->nome = $request->nome;
-                $Cliente->cpf = $request->cpf;
-                $Cliente->email = $request->email;
-                $Cliente->telefone = $request->telefone;
-                $Cliente->sexo = $request->sexo;
-                $Cliente->idade = $request->idade;
-                $Cliente->endereco = $request->endereco;
-                $Cliente->padraoCabelo = $request->padraoCabelo;
-                $Cliente->padraoVisual = $request->padraoVisual;
-                $Cliente->save();
-                
-                return redirect()->route('cliente');
-            }
-        }
-        
+    }
+    

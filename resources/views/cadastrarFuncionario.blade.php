@@ -1,19 +1,21 @@
 @extends('template')
 
 @section('conteudo_principal')
+
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <h3 id="tituloPanelPrincipal">Cadastrar Funcionario</h3>
 <div id="form-cadastro">
     <form action="{{route('funcionario.novo')}}" method="get">
         @csrf      
-        
-        @if(!empty(session('erro')))
-        <!-- LOGIN ou SENHA INCORRETA -->
-        <div class="alerta_valoresConfirmar">
-            <strong>Erro!</strong> {{session('erro')}}
-        </div>
-        <!-- FIM [LOGIN OU SENHA INCORRETA] -->
-        @endif
-        
+                
         <div class="class">
             <label for="campo-nome">Nome:</label>
             <input type="text" maxlength="100" name="nome" value="{{old('nome')}}" id="campo-nome" class="form-cadastro-inputText" >
@@ -73,10 +75,11 @@
         </div>
         
         <div class="form-group">
-            <label for="campo-sexo">CATEGORIA:</label>
-            <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
-                <option value="M">masculino</option>
-                <option value="F">feminino</option>
+            <label for="campo-categoria">Categoria:</label>
+            <select class="form-cadastro-inputSelectMenu" name="codCategoria" id="campo-categoria">
+                @foreach ($listaCategoria as $cat)
+                <option value="{{$cat->id}}">{{$cat->descricao}}</option>
+                @endforeach
             </select>
         </div>
         

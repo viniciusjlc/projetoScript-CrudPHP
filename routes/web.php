@@ -23,6 +23,7 @@ Route::group(['prefix' => 'cliente'], function () {
     Route::get('cadastrar', 'ClienteController@abrirCadastrar')->name('cliente.cadastrar');
     Route::get('visualizar', 'ClienteController@abrirListarCliente')->name('cliente');
     Route::get('novo', 'ClienteController@novo')->name('cliente.novo');
+    Route::get('excluir/{id}', 'ClienteController@excluir')->name('cliente.excluir');
 });
 
 

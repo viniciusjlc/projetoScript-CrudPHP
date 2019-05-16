@@ -11,6 +11,7 @@
                 <th>Nome</th>
                 <th>CPF</th>
                 <th>Email</th>
+                <th>Login</th>
                 <th>Telefone</th>
                 <th>Sexo</th>
                 <th>Idade</th>
@@ -18,20 +19,28 @@
                 <th>Categoria</th>
                 <th>Salario</th>
                 <th>Comissão Total</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->
-        {{-- <tbody>
-            @foreach ($clientes as $cliente)
+        <tbody>
+            @foreach ($listaFuncionario as $func)
             <tr>
-                <td>{{$cliente['nome']}}</td>
-                <td>{{$cliente['email']}}</td>
-                <td>{{$cliente['telefone']}}</td>
-                <td>{{$cliente['sexo']}}</td>
-                <td>{{$cliente['idade']}}</td>
+                <td>{{$func->nome}}</td>
+                <td>{{$func->cpf}}</td>
+                <td>{{$func->email}}</td>
+                <td>{{$func->login}}</td>
+                <td>{{$func->telefone}}</td>
+                <td>{{$func->sexo}}</td>
+                <td>{{$func->idade}}</td>
+                <td>{{$func->endereco}}</td>
+                <td>{{$func->categoria->descricao}}</td>
+                <td>SALARIO</td>
+                <td>COMISSÃO</td>
+                <td><button type="submit" class="btn btn-default">Excluir</button></td>
             </tr>	
             @endforeach	 
-        </tbody> --}}
+        </tbody> 
         <!-- DADOS [FIM] -->
     </table>
 </div>

@@ -2,33 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Servico;
 use Illuminate\Http\Request;
 
 class ServicoController extends Controller
 {
     //
     public function abrirCadastrar(){
-        return view("cadastrarServico");
+        return view("cadastrarServico", ['listaCategoria'=>Categoria::all()]);
     }
     
     public function abrirListarServico() {
-        // $dados['clientes'] = [
-            //     ['id' => 1, 'nome' => 'Cliente 1', 'email' => 'teste@gmail.com', 'telefone' => '111111111',  'sexo' => 1, 'idade' => '18'],
-            //     ['id' => 2, 'nome' => 'Cliente 2', 'email' => 'gteste@mail.com', 'telefone' => '999999999',  'sexo' => 2, 'idade' => '21'],    
-            // ];
-            // return view('visualizarFuncionario', $dados);
-            return view("visualizarServico");
+        return view("visualizarServico",['listaServico'=>Servico::all()]);
+    }
+    
+    public function novo(Request $request){
+        $request->validate([
+            'nome'   => 'required',
+            'preco'   => 'required|numeric',
+            'comissao'   => 'required',
+            'descricao'   => 'required'
+            ]);
+            
+            $Servico = new Servico;
+            $Servico->nome = $request->nome;
+            $Servico->preco = $request->preco;
+            $Servico->comissao = $request->comissao;
+            $Servico->descricao = $request->descricao;
+            $Servico->codCategoria = $request->codCategoria;
+            $Servico->save();
+
+            return redirect()->route('servico');
         }
-        
-        public function novo(Request $request){
-            $request->validate([
-                'nome'   => 'required',
-                'preco'   => 'required|float',
-                'comissao'   => 'required',
-                'descricao'   => 'required'
-                
-                ]);
-                echo "Passou";
-            }
-        }
-        
+    }
+    

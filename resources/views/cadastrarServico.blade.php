@@ -13,7 +13,7 @@
 @endif
 <h3 id="tituloPanelPrincipal">Cadastrar Serviço:</h3>
 <div id="form-cadastro">
-    <form action="{{route('funcionario.novo')}}" method="get">
+    <form action="{{route('servico.novo')}}" method="get">
         @csrf      
         <div class="class">
             <label for="campo-nome">Nome:</label>
@@ -21,11 +21,11 @@
         </div>
         
         <div class="form-group">
-            <label for="campo-sexo">CATEGORIA:</label>
-            <br>
-            <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
-                <option value="M">masculino</option>
-                <option value="F">feminino</option>
+            <label for="campo-categoria">Categoria:</label>
+            <select class="form-cadastro-inputSelectMenu" name="codCategoria" id="campo-categoria">
+                @foreach ($listaCategoria as $cat)
+                <option value="{{$cat->id}}">{{$cat->descricao}}</option>
+                @endforeach
             </select>
         </div>
         

@@ -16,11 +16,10 @@ class CategoriaSeed extends Seeder
         Categoria::create(['descricao' => 'Pintura']);
         Categoria::create(['descricao' => 'Penteado']);
         Categoria::create(['descricao' => 'Tratamento Capilar']);
-        Categoria::create(['descricao' => 'Barba']);
+        Categoria::create(['descricao' => 'Barba e Sobrancelha']);
         Categoria::create(['descricao' => 'Manicure']);
         Categoria::create(['descricao' => 'Pedicure']);
         Categoria::create(['descricao' => 'Dermatologia']);
-        Categoria::create(['descricao' => 'Penteado']);
         Categoria::create(['descricao' => 'Maquiagem']);
         Categoria::create(['descricao' => 'Depilação']);
         Categoria::create(['descricao' => 'Massagem']);
