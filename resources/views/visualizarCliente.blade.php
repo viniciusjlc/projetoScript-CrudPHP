@@ -17,6 +17,7 @@
                 <th>Endereço</th>
                 <th>Padrão de Cabelo</th>
                 <th>Padrão de Visual</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->

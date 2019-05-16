@@ -54,22 +54,12 @@
         </div>
         
         <div class="form-group">
-            <label for="campo-descCabelo">Descrição Cabelo:</label>
-            <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('descCabelo')}}" name="descCabelo" id="campo-descCabelo">
-        </div>
-        
-        <div class="form-group">
-            <label for="campo-descVisual">Visual Cabelo:</label>
-            <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('descVisual')}}" name="descVisual" id="campo-descVisual">
-        </div>
-        
-        <div class="form-group">
             <label for="campo-padraoCabelo">Padrão Cabelo:</label>
             <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('padraoCabelo')}}" name="padraoCabelo" id="campo-padraoCabelo">
         </div>
         
         <div class="form-group">
-            <label for="campo-padraoVisual">Padrão Cabelo:</label>
+            <label for="campo-padraoVisual">Padrão Visual:</label>
             <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('padraoVisual')}}" name="padraoVisual" id="campo-padraoVisual">
         </div>
         
