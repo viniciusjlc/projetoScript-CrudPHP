@@ -12,14 +12,13 @@ class ClienteController extends Controller
         return view("cadastrarCliente");
     }
     
-    public function excluir($id){
-        $msg = "Cliente excluido com sucesso!";
-        Cliente::destroy($id);
-        return redirect()->route('cliente')->with("msg", $msg);
-    }
-    
     public function abrirListarCliente() {
         return view('visualizarCliente', ['listaCliente'=>Cliente::all()]);
+    }
+    
+    public function excluir($id){
+        Cliente::destroy($id);
+        return redirect()->route('cliente')->with("msg", "Cliente excluido com sucesso!");
     }
     
     public function novo(Request $request){

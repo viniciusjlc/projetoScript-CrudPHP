@@ -16,6 +16,11 @@ class ServicoController extends Controller
     public function abrirListarServico() {
         return view("visualizarServico",['listaServico'=>Servico::all()]);
     }
+
+    public function excluir($id){
+        Servico::destroy($id);
+        return redirect()->route('servico')->with("msg", "Serviço excluido com sucesso!");
+    }
     
     public function novo(Request $request){
         $request->validate([

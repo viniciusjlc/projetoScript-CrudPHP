@@ -2,7 +2,13 @@
 
 @section('conteudo_principal')
 
-
+@if (session('msg'))
+<div class="alert alert-success">
+    <ul>
+        <li>{{session('msg')}}</li>
+    </ul>
+</div>
+@endif
 <h3 id="tituloPanelPrincipal">Funcionarios:</h3>
 <div class="tabela-visualizacao">                  
     <table class="padraoTable">
@@ -37,7 +43,7 @@
                 <td>{{$func->categoria->descricao}}</td>
                 <td>SALARIO</td>
                 <td>COMISSÃO</td>
-                <td><button type="submit" class="btn btn-default">Excluir</button></td>
+                <td><button type="button" onclick="window.location.href='{{route('funcionario.excluir', ['id'=>$func->id])}}'" class="btn btn-default">Excluir</button></td>
             </tr>	
             @endforeach	 
         </tbody> 

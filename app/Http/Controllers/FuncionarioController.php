@@ -17,6 +17,11 @@ class FuncionarioController extends Controller
     public function abrirListarFuncionario() {
         return view("visualizarFuncionario", ['listaFuncionario'=>Funcionario::all()]);
     }
+
+    public function excluir($id){
+        Funcionario::destroy($id);
+        return redirect()->route('funcionario')->with("msg", "Funcionário excluido com sucesso!");
+    }
     
     public function novo(Request $request){
         $request->validate([
