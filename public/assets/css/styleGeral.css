@@ -324,3 +324,7 @@ table.padraoTable tfoot td {
 table.padraoTable tfoot .links {
     text-align: right;
 }
+
+#coluna-acao{
+    width: 17%;
+}

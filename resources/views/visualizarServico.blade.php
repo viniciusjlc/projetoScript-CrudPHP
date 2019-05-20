@@ -28,10 +28,13 @@
             <tr>
                 <td>{{$serv->nome}}</td>
                 <td>{{$serv->categoria->descricao}}</td>
-                <td>{{$serv->comissao}}</td>
+                <td>{{$serv->comissao}}%</td>
                 <td>{{$serv->preco}}</td>
                 <td>{{$serv->descricao}}</td>
-                <td><button type="button" onclick="window.location.href='{{route('servico.excluir', ['id'=>$serv->id])}}'" class="btn btn-default">Excluir</button></td>
+                <td>
+                    <button type="button" class="btn btn-default">Alterar</button>
+                    <button type="button" onclick="window.location.href='{{route('servico.excluir', ['id'=>$serv->id])}}'" class="btn btn-default">Excluir</button>
+                </td>
             </tr>	
             @endforeach	 
         </tbody> 

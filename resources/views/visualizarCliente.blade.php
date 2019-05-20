@@ -23,7 +23,7 @@
                 <th>Endereço</th>
                 <th>Padrão de Cabelo</th>
                 <th>Padrão de Visual</th>
-                <th>Ações</th>
+                <th id="coluna-acao">Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->
@@ -39,7 +39,10 @@
                 <td>{{$clt->endereco}}</td>
                 <td>{{$clt->padraoCabelo}}</td>
                 <td>{{$clt->padraoVisual}}</td>
-                <td><button type="button" onclick="window.location.href='{{route('cliente.excluir', ['id'=>$clt->id])}}'" class="btn btn-default">Excluir</button></td>
+                <td>
+                    <button type="button" onclick="window.location.href='{{route('cliente.alterar', ['id'=>$clt->id])}}'" class="btn btn-default">Alterar</button>
+                    <button type="button" onclick="window.location.href='{{route('cliente.excluir', ['id'=>$clt->id])}}'" class="btn btn-default">Excluir</button>
+                </td>
                 
             </tr>	
             @endforeach	 
@@ -47,8 +50,4 @@
         <!-- DADOS [FIM] -->
     </table>
 </div>
-
-
-
-
 @endsection

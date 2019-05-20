@@ -22,9 +22,10 @@ Route::get('/', "LoginController@abrirLogin")->name("home");
 Route::group(['prefix' => 'cliente'], function () {
     Route::get('cadastrar', 'ClienteController@abrirCadastrar')->name('cliente.cadastrar');
     Route::get('visualizar', 'ClienteController@abrirListarCliente')->name('cliente');
-    Route::get('novo', 'ClienteController@novo')->name('cliente.novo');
+    Route::post('novo', 'ClienteController@novo')->name('cliente.novo');
     Route::get('excluir/{id}', 'ClienteController@excluir')->name('cliente.excluir');
-    Route::get('alterar', 'ClienteController@abrirAlterar')->name('cliente.alterar');
+    Route::get('alterar/{id}', 'ClienteController@abrirAlterar')->name('cliente.alterar');
+    Route::post('alterar/{id}', 'ClienteController@alterar')->name('cliente.editar');
 });
 
 
