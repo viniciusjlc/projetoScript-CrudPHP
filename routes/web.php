@@ -35,6 +35,8 @@ Route::group(['prefix' => 'funcionario'], function () {
     Route::get('visualizar', 'FuncionarioController@abrirListarFuncionario')->name('funcionario');
     Route::get('novo', 'FuncionarioController@novo')->name('funcionario.novo');
     Route::get('excluir/{id}', 'FuncionarioController@excluir')->name('funcionario.excluir');
+    Route::get('alterar/{id}', 'FuncionarioController@abrirAlterar')->name('funcionario.alterar');
+    Route::post('alterar/{id}', 'FuncionarioController@alterar')->name('funcionario.editar');
 });
 
 //SERVIÇO:
@@ -43,6 +45,8 @@ Route::group(['prefix' => 'servico'], function () {
     Route::get('visualizar', 'ServicoController@abrirListarServico')->name('servico');
     Route::get('novo', 'ServicoController@novo')->name('servico.novo');
     Route::get('excluir/{id}', 'ServicoController@excluir')->name('servico.excluir');
+    Route::get('alterar/{id}', 'ServicoController@abrirAlterar')->name('servico.alterar');
+    Route::post('alterar/{id}', 'ServicoController@alterar')->name('servico.editar');
 });
 
 //MARCAÇÃO:

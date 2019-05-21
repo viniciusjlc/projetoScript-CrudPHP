@@ -16,29 +16,41 @@ class ServicoController extends Controller
     public function abrirListarServico() {
         return view("visualizarServico",['listaServico'=>Servico::all()]);
     }
-
-    public function excluir($id){
-        Servico::destroy($id);
-        return redirect()->route('servico')->with("msg", "Serviço excluido com sucesso!");
-    }
     
-    public function novo(Request $request){
-        $request->validate([
-            'nome'   => 'required',
-            'preco'   => 'required|numeric',
-            'comissao'   => 'required',
-            'descricao'   => 'required'
-            ]);
-            
-            $Servico = new Servico;
-            $Servico->nome = $request->nome;
-            $Servico->preco = $request->preco;
-            $Servico->comissao = $request->comissao;
-            $Servico->descricao = $request->descricao;
-            $Servico->codCategoria = $request->codCategoria;
-            $Servico->save();
-
+    public function abrirAlterar($id){
+        return view("alterarServico",[
+            'servico'=>Servico::findOrfail($id),
+            'listaCategoria'=>Categoria::all()]);
+        }
+        
+        public function alterar(Request $request, $id){
+            $this->validarServico($request);
+            Servico::where('id',$id)->update($request->except('_token'));
             return redirect()->route('servico');
         }
-    }
-    
+        
+        public function excluir($id){
+            Servico::destroy($id);
+            return redirect()->route('servico')->with("msg", "Serviço excluido com sucesso!");
+        }
+        
+        public function novo(Request $request){
+            $request->validate([
+                'nome'   => 'required',
+                'preco'   => 'required|numeric',
+                'comissao'   => 'required',
+                'descricao'   => 'required'
+                ]);
+                
+                $Servico = new Servico;
+                $Servico->nome = $request->nome;
+                $Servico->preco = $request->preco;
+                $Servico->comissao = $request->comissao;
+                $Servico->descricao = $request->descricao;
+                $Servico->codCategoria = $request->codCategoria;
+                $Servico->save();
+                
+                return redirect()->route('servico');
+            }
+        }
+        

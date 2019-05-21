@@ -25,7 +25,7 @@
                 <th>Categoria</th>
                 <th>Salario</th>
                 <th>Comissão Total</th>
-                <th>Ações</th>
+                <th id="coluna-acao">Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->
@@ -43,7 +43,10 @@
                 <td>{{$func->categoria->descricao}}</td>
                 <td>SALARIO</td>
                 <td>COMISSÃO</td>
-                <td><button type="button" onclick="window.location.href='{{route('funcionario.excluir', ['id'=>$func->id])}}'" class="btn btn-default">Excluir</button></td>
+                <td>
+                    <button type="button" onclick="window.location.href='{{route('funcionario.alterar', ['id'=>$func->id])}}'" class="btn btn-default">Alterar</button>
+                    <button type="button" onclick="window.location.href='{{route('funcionario.excluir', ['id'=>$func->id])}}'" class="btn btn-default">Excluir</button>
+                </td>
             </tr>	
             @endforeach	 
         </tbody> 

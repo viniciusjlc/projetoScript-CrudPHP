@@ -19,7 +19,7 @@
                 <th>Comissão</th>
                 <th>Preco</th>
                 <th>Descrição</th>
-                <th>Ações</th>
+                <th id="coluna-acao">Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->
@@ -32,7 +32,7 @@
                 <td>{{$serv->preco}}</td>
                 <td>{{$serv->descricao}}</td>
                 <td>
-                    <button type="button" class="btn btn-default">Alterar</button>
+                    <button type="button" onclick="window.location.href='{{route('servico.alterar', ['id'=>$serv->id])}}'" class="btn btn-default">Alterar</button>
                     <button type="button" onclick="window.location.href='{{route('servico.excluir', ['id'=>$serv->id])}}'" class="btn btn-default">Excluir</button>
                 </td>
             </tr>	
