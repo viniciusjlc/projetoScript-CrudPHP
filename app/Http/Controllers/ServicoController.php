@@ -10,7 +10,7 @@ class ServicoController extends Controller
 {
     //
     public function abrirCadastrar(){
-        return view("cadastrarServico", ['listaCategoria'=>Categoria::all()]);
+        return view("cadastrarServico", ['listaCategoria'=>Categoria::all(), 'servico'=>new Servico]);
     }
     
     public function abrirListarServico() {

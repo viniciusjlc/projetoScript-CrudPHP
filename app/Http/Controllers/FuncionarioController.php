@@ -11,7 +11,7 @@ class FuncionarioController extends Controller
     //
     
     public function abrirCadastrar(){
-        return view("cadastrarFuncionario", ['listaCategoria'=>Categoria::all()]);
+        return view("cadastrarFuncionario", ['listaCategoria'=>Categoria::all(), 'funcionario'=>new Funcionario]);
     }
     
     public function abrirListarFuncionario() {

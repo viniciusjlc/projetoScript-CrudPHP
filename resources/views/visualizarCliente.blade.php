@@ -39,7 +39,7 @@
                 <td>{{$clt->endereco}}</td>
                 <td>{{$clt->padraoCabelo}}</td>
                 <td>{{$clt->padraoVisual}}</td>
-                <td>
+                <td align="center">      
                     <button type="button" onclick="window.location.href='{{route('cliente.alterar', ['id'=>$clt->id])}}'" class="btn btn-default">Alterar</button>
                     <button type="button" onclick="window.location.href='{{route('cliente.excluir', ['id'=>$clt->id])}}'" class="btn btn-default">Excluir</button>
                 </td>
