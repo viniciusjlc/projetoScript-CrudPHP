@@ -30,9 +30,9 @@
 
 <div class="form-group">
     <label for="campo-sexo">Sexo:</label>
-    <select class="form-cadastro-inputSelectMenu" value="{{old('sexo', $cliente->sexo)}}" name="sexo" id="campo-sexo">
-        <option value="M">masculino</option>
-        <option value="F">feminino</option>
+    <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
+        <option value="M" @if(old('sexo', $cliente->sexo) == 'M')  selected @endif >Masculino</option>
+        <option value="F" @if(old('sexo', $cliente->sexo) == 'F')  selected @endif >Feminino</option>
     </select>
 </div>
 
