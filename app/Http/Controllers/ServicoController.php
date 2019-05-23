@@ -42,13 +42,7 @@ class ServicoController extends Controller
                 'descricao'   => 'required'
                 ]);
                 
-                $Servico = new Servico;
-                $Servico->nome = $request->nome;
-                $Servico->preco = $request->preco;
-                $Servico->comissao = $request->comissao;
-                $Servico->descricao = $request->descricao;
-                $Servico->codCategoria = $request->codCategoria;
-                $Servico->save();
+                Servico::create($request->except(['_token']));
                 
                 return redirect()->route('servico');
             }

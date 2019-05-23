@@ -2,14 +2,15 @@
 
 @section('conteudo_principal')
 
+
+<h3 id="tituloPanelPrincipal">Clientes:</h3>
 @if (session('msg'))
 <div class="alert alert-success">
     <ul>
         <li>{{session('msg')}}</li>
     </ul>
 </div>
-@endif
-<h3 id="tituloPanelPrincipal">Clientes:</h3>
+@endifS
 <div class="tabela-visualizacao">                  
     <table class="padraoTable">
         <thead>

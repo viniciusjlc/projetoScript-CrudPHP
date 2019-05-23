@@ -37,14 +37,14 @@ class FuncionarioController extends Controller
         
         public function novo(Request $request){
             $request->validate([
-                'nome'   => 'required',
+                'nome'  => 'required',
                 'cpf'   => 'required',
-                'email'   => 'required',
+                'email' =>  'required',
                 'confirmarEmail' => [function ($att, $value, $fail) use ($request) {
                     if($value != $request->email) $fail('Confirme seu email corretamente');
                 }],
                 'telefone'   => 'required|integer',
-                'sexo'   => 'required',
+                'sexo'       => 'required',
                 'idade'   => 'required|integer',
                 'senha'   => 'required',
                 'endereco' => 'required',
@@ -53,18 +53,7 @@ class FuncionarioController extends Controller
                 }]
                 ]);
                 
-                $Funcionario = new Funcionario;
-                $Funcionario->nome = $request->nome;
-                $Funcionario->cpf = $request->cpf;
-                $Funcionario->email = $request->email;
-                $Funcionario->login = $request->login;
-                $Funcionario->telefone = $request->telefone;
-                $Funcionario->sexo = $request->sexo;
-                $Funcionario->idade = $request->idade;
-                $Funcionario->senha = $request->senha;
-                $Funcionario->endereco = $request->endereco;
-                $Funcionario->codCategoria = $request->codCategoria;
-                $Funcionario->save();
+                Funcionario::create($request()->except(['confirmarEmail','confirmarSenha','_token']));
                 
                 return redirect()->route('funcionario');
             }
