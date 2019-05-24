@@ -2,6 +2,8 @@
 
 @section('conteudo_principal')
 
+
+<h3 id="tituloPanelPrincipal">Serviço:</h3>
 @if (session('msg'))
 <div class="alert alert-success">
     <ul>
@@ -9,7 +11,6 @@
     </ul>
 </div>
 @endif
-<h3 id="tituloPanelPrincipal">Serviço:</h3>
 <div class="tabela-visualizacao">                  
     <table class="padraoTable">
         <thead>

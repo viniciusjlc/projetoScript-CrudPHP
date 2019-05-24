@@ -63,7 +63,6 @@
     <!-- FIM BARRA DE NAVEGAÇÃO -->
     
     <div class="container">
-        {{session('funcNome')}}
         <div class="panelPrincipal">
             <!-- CONTEUDO PRINCIPAL [INICIO] -->
             @yield('conteudo_principal')

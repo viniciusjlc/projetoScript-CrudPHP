@@ -10,13 +10,9 @@ class LoginController extends Controller
     public function abrirLogin(){
         return view('login');
     }
-    
-    // public function logar(){
-        //    return view('menu');
-        //}
         
         public function logar(Request $request) {
-            $funcionario = Funcionario::where('email',$request->email)->where('senha',$request->senha)->first();
+            $funcionario = Funcionario::where('login',$request->login)->where('senha',$request->senha)->first();
             if($funcionario != null){
                 session(['funcId'=>$funcionario->id,'funcNome'=>$funcionario->nome]);
                 return redirect()->route('principal');

@@ -20,6 +20,7 @@ class CriandoTabelaMarcacoes extends Migration
             $table->integer('codCliente');
             $table->integer('codServico');
             $table->integer('codFuncionario');
+            $table->enum('status', ['Marcado', 'Executando', 'Finalizado', 'Cancelado']);
             $table->timestamps();
         });
     }

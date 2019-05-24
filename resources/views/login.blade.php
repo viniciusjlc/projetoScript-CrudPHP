@@ -19,7 +19,7 @@
                     @csrf
                     <div id="campos_login">
                         <br/>
-                        <input type="email" placeholder="E-mail" name="email" id="campo-email"/>
+                        <input type="login" placeholder="Login" name="login" id="campo-login"/>
                         <br/>
                         <br/>
                         <input type="password" placeholder="Senha"  name="senha" id="campo-senha"/>

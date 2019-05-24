@@ -10,7 +10,7 @@
         <li>{{session('msg')}}</li>
     </ul>
 </div>
-@endifS
+@endif
 <div class="tabela-visualizacao">                  
     <table class="padraoTable">
         <thead>

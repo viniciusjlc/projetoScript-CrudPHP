@@ -7,4 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Marcacoes extends Model
 {
     //
+    public function funcionario(){
+        return $this->belongsTo('App\Models\Funcionario','codFuncionario');
+    }
+    public function cliente(){
+        return $this->belongsTo('App\Models\Cliente','codCliente');
+    }
+    public function servico(){
+        return $this->belongsTo('App\Models\Servico','codServico');
+    }
 }
