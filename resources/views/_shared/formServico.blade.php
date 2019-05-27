@@ -15,6 +15,7 @@
 
 <div class="form-group">
     <label for="campo-categoria">Categoria:</label>
+    <br>
     <select class="form-cadastro-inputSelectMenu" name="codCategoria" value="{{old('codCategoria', $servico->codCategoria)}}" id="campo-categoria">
         @foreach($listaCategoria as $cat)    
         <option value="{{$cat->id}}" {{old('codCategoria', $servico->codCategoria) == $cat->id ? 'selected' : ''}} > {{ $cat->descricao }} </option>

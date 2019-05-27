@@ -50,6 +50,7 @@
 
 <div class="form-group">
     <label for="campo-sexo">Sexo:</label>
+    <br>
     <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
         <option value="M" @if(old('sexo', $funcionario->sexo) == 'M')  selected @endif >Masculino</option>
         <option value="F" @if(old('sexo', $funcionario->sexo) == 'F')  selected @endif >Feminino</option>
@@ -68,6 +69,7 @@
 
 <div class="form-group">
     <label for="campo-categoria">Categoria:</label>
+    <br>
     <select class="form-cadastro-inputSelectMenu" name="codCategoria" value="{{old('codCategoria', $funcionario->codCategoria)}}" id="campo-categoria">
         @foreach($listaCategoria as $cat)    
         <option value="{{$cat->id}}" {{old('codCategoria', $funcionario->codCategoria) == $cat->id ? 'selected' : ''}} > {{ $cat->descricao }} </option>

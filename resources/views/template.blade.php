@@ -21,7 +21,7 @@
             <button class="dropbtn">Marcação</button>
             <div class="dropdown-content">
                 <a href="{{route('marcacao')}}">Visualizar</a>
-                <a href="{{route('cliente.cadastrar')}}">Cadastrar Marcação</a>
+                <a href="{{route('marcacao.cadastrar')}}">Cadastrar</a>
             </div>
         </div>
         <div class="dropdown">

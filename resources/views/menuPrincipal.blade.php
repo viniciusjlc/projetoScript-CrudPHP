@@ -18,7 +18,7 @@
         </thead>
         <!-- DADOS -->
         <tbody>
-            @foreach ($marcacoes as $marcacao)
+            @foreach ($listaMarcacao as $marcacao)
             <tr>
                 <td>{{$marcacao['cliente']}}</td>
                 <td>{{$marcacao['telefone']}}</td>

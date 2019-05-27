@@ -30,6 +30,7 @@
 
 <div class="form-group">
     <label for="campo-sexo">Sexo:</label>
+    <br>
     <select class="form-cadastro-inputSelectMenu" name="sexo" id="campo-sexo">
         <option value="M" @if(old('sexo', $cliente->sexo) == 'M')  selected @endif >Masculino</option>
         <option value="F" @if(old('sexo', $cliente->sexo) == 'F')  selected @endif >Feminino</option>
