@@ -4,7 +4,6 @@
 
 <h3 id="tituloPanelPrincipal">Bem-vindo {{session('funcNome')}}, resumo do Salão:</h3>
 <div class="tabela-visualizacao">         
-    
     <table class="padraoTable">
         <thead>
             <tr>
@@ -16,22 +15,20 @@
                 <th>Funcionario</th>
             </tr>
         </thead>
-        <!-- DADOS -->
         <tbody>
             @foreach ($listaMarcacao as $marcacao)
             <tr>
-                <td>{{$marcacao['cliente']}}</td>
-                <td>{{$marcacao['telefone']}}</td>
-                <td>{{$marcacao['servico']}}</td>
+                <td>{{$marcacao->cliente->nome}}</td>
+                <td>{{$marcacao->cliente->telefone}}</td>
+                <td>{{$marcacao->servico->nome}}</td>
                 <td>{{$marcacao['horario']}}</td>
-                <td>{{$marcacao['dia']}}</td>
-                <td>{{$marcacao['funcionario']}}</td>
+                <td>{{$marcacao['data']}}</td>
+                <td>{{$marcacao->funcionario->nome}}</td>
             </tr>	
             @endforeach	 
         </tbody>
-        <!-- DADOS [FIM] -->
     </table>
-    
+
 </div>
 <h3 id="valorCaixa">Valor total em caixa: R$320,00</h3>
 <button class="botaoFecharCaixa botao_cor ">Fechar o dia</button>

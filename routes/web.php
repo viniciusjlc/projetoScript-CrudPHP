@@ -54,7 +54,7 @@ Route::group(['middleware' => ['login']], function () {
     Route::group(['prefix' => 'marcacao'], function () {
         Route::get('cadastrar', 'MarcacaoController@abrirCadastrar')->name('marcacao.cadastrar');
         Route::get('visualizar', 'MarcacaoController@abrirListarMarcacao')->name('marcacao');
-        Route::get('novo', 'MarcacaoController@novo')->name('marcacao.novo');
+        Route::post('novo', 'MarcacaoController@novo')->name('marcacao.novo');
         Route::get('excluir/{id}', 'MarcacaoController@excluir')->name('marcacao.excluir');
         Route::get('alterar/{id}', 'MarcacaoController@abrirAlterar')->name('marcacao.alterar');
         Route::post('alterar/{id}', 'MarcacaoController@alterar')->name('marcacao.editar');

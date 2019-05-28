@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Marcacoes extends Model
 {
     //
+    protected $guarded = [];
+    
     public function funcionario(){
         return $this->belongsTo('App\Models\Funcionario','codFuncionario');
     }

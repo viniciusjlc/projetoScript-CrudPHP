@@ -36,8 +36,8 @@ class FuncionarioController extends Controller
         }
         
         public function novo(Request $request){
-            validarFuncionario($request);
-            Funcionario::create($request()->except(['confirmarEmail','confirmarSenha','_token']));
+            $this->validarFuncionario($request);
+            Funcionario::create($request->except(['confirmarEmail','confirmarSenha','_token']));
             return redirect()->route('funcionario');
         }
         
