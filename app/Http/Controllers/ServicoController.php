@@ -34,16 +34,17 @@ class ServicoController extends Controller
             return redirect()->route('servico')->with("msg", "Serviço excluido com sucesso!");
         }
         
-        public function novo(Request $request){
+        public function validarServico(Request $request){
             $request->validate([
                 'nome'   => 'required',
                 'preco'   => 'required|numeric',
                 'comissao'   => 'required',
                 'descricao'   => 'required'
                 ]);
-                
+            }
+            public function novo(Request $request){
+                $this->validarServico($request);
                 Servico::create($request->except(['_token']));
-                
                 return redirect()->route('servico');
             }
         }

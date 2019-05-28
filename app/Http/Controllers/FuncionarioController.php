@@ -26,16 +26,22 @@ class FuncionarioController extends Controller
         
         public function alterar(Request $request, $id){
             $this->validarFuncionario($request);
-            Funcionario::where('id',$id)->update($request->except('_token'));
+            Funcionario::where('id',$id)->update($request->except(['confirmarEmail','confirmarSenha','_token']));;
             return redirect()->route('funcionario');
         }
         
         public function excluir($id){
-            Funcionario::destroy($id);
+            $this->Funcionario::destroy($id);
             return redirect()->route('funcionario')->with("msg", "Funcionário excluido com sucesso!");
         }
         
         public function novo(Request $request){
+            validarFuncionario($request);
+            Funcionario::create($request()->except(['confirmarEmail','confirmarSenha','_token']));
+            return redirect()->route('funcionario');
+        }
+        
+        public function validarFuncionario(Request $request){
             $request->validate([
                 'nome'  => 'required',
                 'cpf'   => 'required',
@@ -52,10 +58,7 @@ class FuncionarioController extends Controller
                     if($value != $request->senha) $fail('Confirme sua senha corretamente');
                 }]
                 ]);
-                
-                Funcionario::create($request()->except(['confirmarEmail','confirmarSenha','_token']));
-                
-                return redirect()->route('funcionario');
             }
+            
         }
         

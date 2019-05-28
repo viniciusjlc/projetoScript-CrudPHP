@@ -2,7 +2,7 @@
 
 @section('conteudo_principal')
 
-<h3 id="tituloPanelPrincipal">Bem-vindo{{session('funcNome')}}, resumo do Salão:</h3>
+<h3 id="tituloPanelPrincipal">Bem-vindo {{session('funcNome')}}, resumo do Salão:</h3>
 <div class="tabela-visualizacao">         
     
     <table class="padraoTable">

@@ -1,6 +1,4 @@
 @extends('template')
-
-
 @section('conteudo_principal')
 <h3 id="tituloPanelPrincipal">Alterar Cliente</h3>
 <div id="form-cadastro">
