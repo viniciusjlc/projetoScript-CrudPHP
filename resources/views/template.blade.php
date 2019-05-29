@@ -16,7 +16,7 @@
     <!-- BARRA DE NAVEGAÇÃO -->
     <header id="cabecalho">
         
-        <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Mozart Hairs Style</label>
+        <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Hairs Style</label>
         <div class="dropdown">
             <button class="dropbtn">Marcação</button>
             <div class="dropdown-content">

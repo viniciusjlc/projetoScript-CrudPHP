@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Mozart Hairs Style  - Login</title>
+    <title>Hairs Style  - Login</title>
     <meta charset="utf-8"/>
     
     <link rel="stylesheet" href="{{url('assets\css\styleGeral.css')}}">
@@ -11,7 +11,7 @@
 <body>
     
     <div class="container">
-        <h1 id="titulo_login">Mozart Hairs Style</h1>
+        <h1 id="titulo_login">Hairs Style</h1>
         <div id="grid_login">
             <h2>Login</h2>
             <div id="panel_dadosLogin">
