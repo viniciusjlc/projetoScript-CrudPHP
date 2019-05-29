@@ -58,5 +58,6 @@ Route::group(['middleware' => ['login']], function () {
         Route::get('excluir/{id}', 'MarcacaoController@excluir')->name('marcacao.excluir');
         Route::get('alterar/{id}', 'MarcacaoController@abrirAlterar')->name('marcacao.alterar');
         Route::post('alterar/{id}', 'MarcacaoController@alterar')->name('marcacao.editar');
+        Route::get('buscarFuncionarios/{codCategoria?}', 'MarcacaoController@buscarFuncionario')->name('marcacao.funcionario');
     });
 });

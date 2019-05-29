@@ -50,3 +50,15 @@
     <input type="time" name="horario" value="{{old('horario', $marcacao->horario)}}" id="campo-horario" class="form-cadastro" >
 </div>
 <br>
+
+
+<script>
+    $('#campo-servico').change(()=>{
+        $.get('{{marcacao.funcionario}}/'+$(this).val(), (retornoFuncionario)=>{
+            $('#campo-funcionario').html('');
+            retornoFuncionario.forEach(element => {
+                $('#campo-funcionario').append('<option value="'+element.id+'" >'+element.nome+'</option>')
+            });
+        })
+    })  
+</script>

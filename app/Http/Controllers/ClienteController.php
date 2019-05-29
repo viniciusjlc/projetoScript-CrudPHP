@@ -24,21 +24,9 @@ class ClienteController extends Controller
                 ]);
             }
             
-            public function alterar(Request $request, $id){
-                $this->validarCliente($request);
-                Cliente::where('id',$id)->update($request->except('_token'));
-                return redirect()->route('cliente');
-            }
-            
             public function excluir($id){
                 Cliente::destroy($id);
                 return redirect()->route('cliente')->with("msg", "Cliente excluido com sucesso!");
-            }
-            
-            public function novo(Request $request){
-                $this->validarCliente($request);
-                Cliente::create($request->all());
-                return redirect()->route('cliente');
             }
             
             public function validarCliente(Request $request){
@@ -50,5 +38,18 @@ class ClienteController extends Controller
                     'idade'   => 'required|integer'
                     ]  );
                 }
+                
+                public function novo(Request $request){
+                    $this->validarCliente($request);
+                    Cliente::create($request->all());
+                    return redirect()->route('cliente');
+                }
+                
+                public function alterar(Request $request, $id){
+                    $this->validarCliente($request);
+                    Cliente::where('id',$id)->update($request->except('_token'));
+                    return redirect()->route('cliente');
+                }
+                
             }
             

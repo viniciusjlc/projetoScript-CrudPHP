@@ -23,11 +23,7 @@ class ServicoController extends Controller
             'listaCategoria'=>Categoria::all()]);
         }
         
-        public function alterar(Request $request, $id){
-            $this->validarServico($request);
-            Servico::where('id',$id)->update($request->except('_token'));
-            return redirect()->route('servico');
-        }
+        
         
         public function excluir($id){
             Servico::destroy($id);
@@ -45,6 +41,12 @@ class ServicoController extends Controller
             public function novo(Request $request){
                 $this->validarServico($request);
                 Servico::create($request->except(['_token']));
+                return redirect()->route('servico');
+            }
+
+            public function alterar(Request $request, $id){
+                $this->validarServico($request);
+                Servico::where('id',$id)->update($request->except('_token'));
                 return redirect()->route('servico');
             }
         }
