@@ -53,12 +53,16 @@
 
 
 <script>
-    $('#campo-servico').change(()=>{
-        $.get('{{marcacao.funcionario}}/'+$(this).val(), (retornoFuncionario)=>{
+    $('#campo-servico').change(() => carregarFuncionarios())  
+    carregarFuncionarios();
+    function carregarFuncionarios(){
+        $.get('{{route('marcacao.funcionario')}}/'+$('#campo-servico').val(), (retornoFuncionario)=>{
+            console.log(retornoFuncionario);
             $('#campo-funcionario').html('');
             retornoFuncionario.forEach(element => {
+                console.log('b');
                 $('#campo-funcionario').append('<option value="'+element.id+'" >'+element.nome+'</option>')
             });
         })
-    })  
+    }
 </script>
