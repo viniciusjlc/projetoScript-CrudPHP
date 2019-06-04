@@ -17,6 +17,13 @@
     <header id="cabecalho">
         <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Hairs Style</label>
         <div class="dropdown">
+            <button class="dropbtn">Outros</button>
+            <div class="dropdown-content">
+                <a href="{{route('caixa.abrir')}}">Sair</a>
+                <a href="{{route('caixa.vendas')}}">Sobre</a>
+            </div>
+        </div>
+        <div class="dropdown">
             <button class="dropbtn">Caixa</button>
             <div class="dropdown-content">
                 <a href="{{route('caixa.abrir')}}">Realizar Venda</a>
