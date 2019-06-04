@@ -64,6 +64,8 @@ Route::group(['middleware' => ['login']], function () {
     //CAIXA:
     Route::group(['prefix' => 'caixa'], function () {
         Route::get('caixa', 'CaixaController@abrirCaixa')->name('caixa.abrir');
+        Route::get('estoque', 'CaixaController@abrirEstoque')->name('caixa.estoque');
+        Route::get('vendas', 'CaixaController@abrirVendas')->name('caixa.vendas');
     });
 
 });

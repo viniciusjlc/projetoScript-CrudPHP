@@ -1,4 +1,3 @@
-
 @extends('template')
 @section('conteudo_principal')
 <h3 id="tituloPanelPrincipal">Cadastrar Marcação</h3>

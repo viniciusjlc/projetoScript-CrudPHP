@@ -20,8 +20,8 @@
             <button class="dropbtn">Caixa</button>
             <div class="dropdown-content">
                 <a href="{{route('caixa.abrir')}}">Realizar Venda</a>
-                <a href="{{route('marcacao.cadastrar')}}">Verificar Vendas</a>
-                <a href="{{route('marcacao.cadastrar')}}">Estoque</a>
+                <a href="{{route('caixa.vendas')}}">Verificar Vendas</a>
+                <a href="{{route('caixa.estoque')}}">Estoque</a>
             </div>
         </div>
         <div class="dropdown">

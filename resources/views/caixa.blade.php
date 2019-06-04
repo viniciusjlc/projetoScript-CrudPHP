@@ -25,6 +25,14 @@
                 <td>15</td>
                 <td>75</td>
             </tr>
+            <tr>
+                <td>A</td>
+                <td>1</td>
+                <td>Tratamento Capilar</td>
+                <td>serviço</td>
+                <td>45</td>
+                <td>45</td>
+            </tr>
         </tbody> 
     </table>
     <div style="width: 95% columns: 2">
@@ -35,11 +43,11 @@
     </div>
 </div>
 <div id="conteudo-caixa">
-    <label>Subtotal Produtos: </label>
+    <label>Subtotal Produtos: 75,00</label>
     <br>
-    <label>Subtotal Serviços: </label>
+    <label>Subtotal Serviços: 45,00</label>
     <br>
-    <label>Total a Pagar: </label>
+    <label>Total a Pagar: 120,00</label>
     <br>
 </div>
 <button class="dropbtn">Finalizar Compra</button>

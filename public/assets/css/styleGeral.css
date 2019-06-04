@@ -347,3 +347,11 @@ table.padraoTable tfoot .links {
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.adicionar-produto{
+    width: 20%;
+    position: relative;
+    left: 75%;
+    bottom: 8px;
+    font-size: 18px !important;
+}
