@@ -60,4 +60,10 @@ Route::group(['middleware' => ['login']], function () {
         Route::post('alterar/{id}', 'MarcacaoController@alterar')->name('marcacao.editar');
         Route::get('buscarFuncionarios/{codCategoria?}', 'MarcacaoController@buscarFuncionario')->name('marcacao.funcionario');
     });
+
+    //CAIXA:
+    Route::group(['prefix' => 'caixa'], function () {
+        Route::get('caixa', 'CaixaController@abrirCaixa')->name('caixa.abrir');
+    });
+
 });

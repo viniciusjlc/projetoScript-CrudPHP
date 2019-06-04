@@ -164,6 +164,9 @@ h2 {
     display: block;
 }
 
+
+.dropbtn:hover {background-color: #52204e;}
+
 .dropdown-content a:hover {background-color: #ddd;     text-decoration: black;}
 
 /* .dropdown:hover .dropdown-content {display: block;} */
@@ -289,6 +292,13 @@ h2 {
     margin: 3% 0% 10% 0%;
 }
 
+.botao-caixa{
+    width: 48%;
+    border: 1px solid black;
+    margin-bottom: 1%;
+}
+
+
 table.padraoTable {
     position: relative;
     left: 5%;
@@ -328,4 +338,12 @@ table.padraoTable tfoot .links {
 
 #coluna-acao{
     width: 17%;
+}
+
+#conteudo-caixa {
+    position: relative;
+    left: 5%;
+    color: #75376a;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

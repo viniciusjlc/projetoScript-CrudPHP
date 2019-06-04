@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Servico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ServicoController extends Controller
 {
@@ -23,9 +24,8 @@ class ServicoController extends Controller
             'listaCategoria'=>Categoria::all()]);
         }
         
-        
-        
         public function excluir($id){
+            DB::table('marcacoes')->where('codServico', $id)->delete();
             Servico::destroy($id);
             return redirect()->route('servico')->with("msg", "Serviço excluido com sucesso!");
         }
@@ -43,7 +43,7 @@ class ServicoController extends Controller
                 Servico::create($request->except(['_token']));
                 return redirect()->route('servico');
             }
-
+            
             public function alterar(Request $request, $id){
                 $this->validarServico($request);
                 Servico::where('id',$id)->update($request->except('_token'));

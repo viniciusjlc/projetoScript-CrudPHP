@@ -15,8 +15,15 @@
 <body>
     <!-- BARRA DE NAVEGAÇÃO -->
     <header id="cabecalho">
-        
         <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Hairs Style</label>
+        <div class="dropdown">
+            <button class="dropbtn">Caixa</button>
+            <div class="dropdown-content">
+                <a href="{{route('caixa.abrir')}}">Realizar Venda</a>
+                <a href="{{route('marcacao.cadastrar')}}">Verificar Vendas</a>
+                <a href="{{route('marcacao.cadastrar')}}">Estoque</a>
+            </div>
+        </div>
         <div class="dropdown">
             <button class="dropbtn">Marcação</button>
             <div class="dropdown-content">

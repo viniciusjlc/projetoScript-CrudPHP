@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Marcacoes;
+use Illuminate\Support\Facades\DB;
 
 class ClienteController extends Controller
 {
@@ -26,8 +27,7 @@ class ClienteController extends Controller
             }
             
             public function excluir($id){
-                Marcacoes::destroy('codCliente',$id);
-                //Marcacao::destroy($id); //<= QUERO APAGAR UM MARCAÇÃO PELA COLUNA codCliente
+                DB::table('marcacoes')->where('codCliente', $id)->delete();
                 Cliente::destroy($id);
                 return redirect()->route('cliente')->with("msg", "Cliente excluido com sucesso!");
             }

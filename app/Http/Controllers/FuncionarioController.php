@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Funcionario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FuncionarioController extends Controller
 {
@@ -31,7 +32,8 @@ class FuncionarioController extends Controller
         }
         
         public function excluir($id){
-            $this->Funcionario::destroy($id);
+            DB::table('marcacoes')->where('codFuncionario', $id)->delete();
+            Funcionario::destroy($id);
             return redirect()->route('funcionario')->with("msg", "Funcionário excluido com sucesso!");
         }
         

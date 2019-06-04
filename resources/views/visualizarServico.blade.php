@@ -32,7 +32,7 @@
                 <td>{{$serv->comissao}}%</td>
                 <td>{{$serv->preco}}</td>
                 <td>{{$serv->descricao}}</td>
-                <td>
+                <td align="center">
                     <button type="button" onclick="window.location.href='{{route('servico.alterar', ['id'=>$serv->id])}}'" class="btn btn-default">Alterar</button>
                     <button type="button" onclick="window.location.href='{{route('servico.excluir', ['id'=>$serv->id])}}'" class="btn btn-default">Excluir</button>
                 </td>

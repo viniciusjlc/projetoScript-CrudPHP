@@ -43,7 +43,7 @@
                 <td>{{$func->categoria->descricao}}</td>
                 <td>SALARIO</td>
                 <td>COMISSÃO</td>
-                <td>
+                <td align="center">
                     <button type="button" onclick="window.location.href='{{route('funcionario.alterar', ['id'=>$func->id])}}'" class="btn btn-default">Alterar</button>
                     <button type="button" onclick="window.location.href='{{route('funcionario.excluir', ['id'=>$func->id])}}'" class="btn btn-default">Excluir</button>
                 </td>
