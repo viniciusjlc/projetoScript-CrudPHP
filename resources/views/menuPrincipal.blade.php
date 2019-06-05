@@ -31,7 +31,5 @@
 
 </div>
 <h3 id="valorCaixa">Valor total em caixa: R$320,00</h3>
-<button class="botaoFecharCaixa botao_cor ">Fechar o dia</button>
-
-
+<button type="button" onclick="window.location.href='{{route('caixa.vendas')}}'" class="botaoFecharCaixa botao_cor">Fechar o dia</button>
 @endsection
