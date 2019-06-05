@@ -60,12 +60,19 @@ Route::group(['middleware' => ['login']], function () {
         Route::post('alterar/{id}', 'MarcacaoController@alterar')->name('marcacao.editar');
         Route::get('buscarFuncionarios/{codCategoria?}', 'MarcacaoController@buscarFuncionario')->name('marcacao.funcionario');
     });
-
+    
     //CAIXA:
     Route::group(['prefix' => 'caixa'], function () {
         Route::get('caixa', 'CaixaController@abrirCaixa')->name('caixa.abrir');
         Route::get('estoque', 'CaixaController@abrirEstoque')->name('caixa.estoque');
         Route::get('vendas', 'CaixaController@abrirVendas')->name('caixa.vendas');
     });
-
+    
+    //OUTROS:
+    Route::group(['prefix' => 'outros'], function () {
+        Route::get('sair', 'OutrosController@logout')->name('outros.sair');
+        Route::get('estoque', 'CaixaController@abrirEstoque')->name('caixa.estoque');
+    });
+    
+    
 });

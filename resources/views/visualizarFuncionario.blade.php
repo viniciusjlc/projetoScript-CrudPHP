@@ -2,7 +2,7 @@
 
 @section('conteudo_principal')
 
-<h3 id="tituloPanelPrincipal">Funcionarios:</h3>
+<h3 id="tituloPanelPrincipal">Funcionários:</h3>
 @if (session('msg'))
 <div class="alert alert-success">
     <ul>
