@@ -15,7 +15,7 @@
 
 <div class="form-group">
     <label for="campo-idade">CPF:</label>
-    <input type="text"  maxlength="11" class="form-cadastro-inputText" value="{{old('cpf', $cliente->cpf)}}" name="cpf" id="campo-cpf">
+    <input type="text"  maxlength="11" class="form-cadastro-inputText cpf" value="{{old('cpf', $cliente->cpf)}}" name="cpf" id="campo-cpf">
 </div>
 
 <div class="form-group">
@@ -56,3 +56,19 @@
     <label for="campo-padraoVisual">Padrão Visual:</label>
     <input type="text" maxlength="200" class="form-cadastro-inputText" value="{{old('padraoVisual', $cliente->padraoVisual)}}" name="padraoVisual" id="campo-padraoVisual">
 </div>
+
+
+@push('javascript')
+    <script src="{{asset('assets/js/jquery.mask.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.date').mask('00/00/0000');
+            $('.time').mask('00:00:00');
+            $('.phone').mask('00000-0000');
+            $('.cpf').mask('000.000.000-00', {reverse: true});
+            alert('teste');
+        });
+    </script>
+    
+@endpush

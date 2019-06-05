@@ -84,5 +84,7 @@
         </div>
     </div>
     <br/>
+
+    @stack('javascript')
 </body>
 </html>
