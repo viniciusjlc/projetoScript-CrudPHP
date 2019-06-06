@@ -17,8 +17,8 @@
             <tr>
                 <th>Nome</th>
                 <th>Categoria</th>
+                <th>Preço</th>
                 <th>Comissão</th>
-                <th>Preco</th>
                 <th>Descrição</th>
                 <th id="coluna-acao">Ações</th>
             </tr>
@@ -29,8 +29,8 @@
             <tr>
                 <td>{{$serv->nome}}</td>
                 <td>{{$serv->categoria->descricao}}</td>
-                <td>{{$serv->comissao}}%</td>
                 <td>{{$serv->preco}}</td>
+                <td>{{$serv->comissao}}%</td>
                 <td>{{$serv->descricao}}</td>
                 <td align="center">
                     <button type="button" onclick="window.location.href='{{route('servico.alterar', ['id'=>$serv->id])}}'" class="btn btn-default">Alterar</button>

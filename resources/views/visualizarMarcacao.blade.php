@@ -16,10 +16,10 @@
         <thead>
             <tr>
                 <th>Cliente</th>
-                <th class="phone">Telefone</th>
+                <th>Telefone</th>
                 <th>Serviço</th>
+                <th>Data</th>
                 <th>Horario</th>
-                <th>Dia</th>
                 <th>Funcionario</th>
                 <th id="coluna-acao">Ações</th>
             </tr>
@@ -28,10 +28,10 @@
             @foreach ($listaMarcacao as $marcacao)
             <tr>
                 <td>{{$marcacao->cliente->nome}}</td>
-                <td>{{$marcacao->cliente->telefone}}</td>
+                <td class="phone">{{$marcacao->cliente->telefone}}</td>
                 <td>{{$marcacao->servico->nome}}</td>
-                <td>{{$marcacao['horario']}}</td>
-                <td>{{$marcacao['data']}}</td>
+                <td align="center">{{date('d/m/Y', strtotime($marcacao['data']))}}</td>
+                <td align="center">{{$marcacao['horario']}}</td>
                 <td>{{$marcacao->funcionario->nome}}</td>
                 <td align="center">      
                     <button type="button" onclick="window.location.href='{{route('marcacao.alterar', ['id'=>$marcacao->id])}}'" class="btn btn-default">Alterar</button>

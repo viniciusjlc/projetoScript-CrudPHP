@@ -10,8 +10,8 @@
                 <th>Cliente</th>
                 <th>Telefone</th>
                 <th>Serviço</th>
+                <th>Data</th>
                 <th>Horario</th>
-                <th>Dia</th>
                 <th>Funcionario</th>
             </tr>
         </thead>
@@ -21,8 +21,8 @@
                 <td>{{$marcacao->cliente->nome}}</td>
                 <td class="phone">{{$marcacao->cliente->telefone}}</td>
                 <td>{{$marcacao->servico->nome}}</td>
-                <td>{{$marcacao['horario']}}</td>
-                <td>{{$marcacao['data']}}</td>
+                <td align="center">{{date('d/m/Y', strtotime($marcacao['data']))}}</td>
+                <td align="center">{{$marcacao['horario']}}</td>
                 <td>{{$marcacao->funcionario->nome}}</td>
             </tr>	
             @endforeach	 
