@@ -16,7 +16,6 @@
                 <th>Subtotal</th>
                 <th>Hora</th>
                 <th>Data</th>
-                <th id="coluna-acao">Ações</th>
             </tr>
         </thead>
         <!-- DADOS -->
@@ -30,9 +29,6 @@
                 <td>94,95</td>
                 <td>19:20</td>
                 <td>05/06/2019</td>
-                <td align="center">
-                    <button type="button" class="btn btn-default">Excluir</button>
-                </td>
             </tr>
             <tr>
                 <td>S1</td>
@@ -43,9 +39,6 @@
                 <td>29,99</td>
                 <td>16:20</td>
                 <td>11/06/2019</td>
-                <td align="center">
-                    <button type="button" class="btn btn-default">Excluir</button>
-                </td>
             </tr>		
         </tbody> 
         <!-- DADOS [FIM] -->
