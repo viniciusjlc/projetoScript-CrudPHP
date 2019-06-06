@@ -17,7 +17,7 @@
     <header id="cabecalho">
         <label  onclick="window.location.href='{{route('principal')}}'" id="textocabecalho">Hairs Style</label>
         <div class="dropdown">
-            <button class="dropbtn">Outros</button>
+            <button class="dropbtn">Conta</button>
             <div class="dropdown-content">
                 <a href="{{route('outros.sair')}}">Sair</a>
             </div>
