@@ -20,7 +20,6 @@
             <button class="dropbtn">Outros</button>
             <div class="dropdown-content">
                 <a href="{{route('outros.sair')}}">Sair</a>
-                <a href="{{route('caixa.vendas')}}">Sobre</a>
             </div>
         </div>
         <div class="dropdown">

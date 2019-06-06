@@ -36,7 +36,7 @@ class ClienteController extends Controller
                 $request->validate([
                     'nome'   => 'required',
                     'cpf'   => 'required',
-                    'telefone'   => 'required|integer',
+                    'telefone'   => 'required',
                     'sexo'   => 'required',
                     'idade'   => 'required|integer'
                     ]  );
@@ -44,13 +44,21 @@ class ClienteController extends Controller
                 
                 public function novo(Request $request){
                     $this->validarCliente($request);
-                    Cliente::create($request->all());
+                    $dados = $request->except('_token');
+                    $dados['telefone'] = str_replace('-', '', $dados['telefone']);
+                    $dados['cpf'] = str_replace('-', '', $dados['cpf']);
+                    $dados['cpf'] = str_replace('.', '', $dados['cpf']);
+                    Cliente::create($dados);
                     return redirect()->route('cliente');
                 }
                 
                 public function alterar(Request $request, $id){
                     $this->validarCliente($request);
-                    Cliente::where('id',$id)->update($request->except('_token'));
+                    $dados = $request->except('_token');
+                    $dados['telefone'] = str_replace('-', '', $dados['telefone']);
+                    $dados['cpf'] = str_replace('-', '', $dados['cpf']);
+                    $dados['cpf'] = str_replace('.', '', $dados['cpf']);
+                    Cliente::where('id',$id)->update($dados);
                     return redirect()->route('cliente');
                 }
                 

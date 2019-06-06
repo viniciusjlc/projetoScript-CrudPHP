@@ -19,7 +19,7 @@
             @foreach ($listaMarcacao as $marcacao)
             <tr>
                 <td>{{$marcacao->cliente->nome}}</td>
-                <td>{{$marcacao->cliente->telefone}}</td>
+                <td class="phone">{{$marcacao->cliente->telefone}}</td>
                 <td>{{$marcacao->servico->nome}}</td>
                 <td>{{$marcacao['horario']}}</td>
                 <td>{{$marcacao['data']}}</td>
@@ -32,4 +32,15 @@
 </div>
 <h3 id="valorCaixa">Valor total em caixa: R$320,00</h3>
 <button type="button" onclick="window.location.href='{{route('caixa.vendas')}}'" class="botaoFecharCaixa botao_cor">Fechar o dia</button>
+@push('javascript')
+    <script src="{{asset('assets/js/jquery.mask.js')}}"></script>
+<script>
+    $(document).ready(function(){
+        $('.date').mask('00/00/0000');
+        $('.time').mask('00:00');
+        $('.phone').mask('00000-0000');
+        $('.cpf').mask('000.000.000-00', {reverse: true});
+    });
+</script>
+@endpush
 @endsection

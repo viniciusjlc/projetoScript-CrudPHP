@@ -41,13 +41,13 @@
 <div class="class">
     <label for="campo-data">Data:</label>
     <br>
-    <input type="date" name="data" value="{{old('data', $marcacao->data)}}" id="campo-data" class="form-cadastro" >
+    <input type="date" name="data" value="{{old('data', $marcacao->data)}}" id="campo-data" class="form-cadastro date" >
 </div>
 
 <div class="class">
     <label for="campo-horario">Horario:</label>
     <br>
-    <input type="time" name="horario" value="{{old('horario', $marcacao->horario)}}" id="campo-horario" class="form-cadastro" >
+    <input type="time" name="horario" value="{{old('horario', $marcacao->horario)}}" id="campo-horario" class="form-cadastro time" >
 </div>
 <br>
 
@@ -66,3 +66,17 @@
         })
     }
 </script>
+
+@push('javascript')
+    <script src="{{asset('assets/js/jquery.mask.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.date').mask('00/00/0000');
+            $('.time').mask('00:00');
+            $('.phone').mask('00000-0000');
+            $('.cpf').mask('000.000.000-00', {reverse: true});
+        });
+    </script>
+    
+@endpush

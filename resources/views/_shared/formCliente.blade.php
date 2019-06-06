@@ -25,7 +25,7 @@
 
 <div class="form-group">
     <label for="campo-telefone">Telefone:</label>
-    <input type="text" maxlength="9" class="form-cadastro-inputText" value="{{old('telefone', $cliente->telefone)}}" name="telefone" id="campo-telefone">
+    <input type="text" maxlength="9" class="form-cadastro-inputText phone" value="{{old('telefone', $cliente->telefone)}}" name="telefone" id="campo-telefone">
 </div>
 
 <div class="form-group">
@@ -64,7 +64,7 @@
     <script>
         $(document).ready(function(){
             $('.date').mask('00/00/0000');
-            $('.time').mask('00:00:00');
+            $('.time').mask('00:00');
             $('.phone').mask('00000-0000');
             $('.cpf').mask('000.000.000-00', {reverse: true});
         });

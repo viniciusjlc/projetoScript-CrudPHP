@@ -32,9 +32,9 @@
             @foreach ($listaCliente as $clt)
             <tr>
                 <td>{{$clt->nome}}</td>
-                <td>{{$clt->cpf}}</td>
+                <td class="cpf">{{$clt->cpf}}</td>
                 <td>{{$clt->email}}</td>
-                <td>{{$clt->telefone}}</td>
+                <td class="phone">{{$clt->telefone}}</td>
                 <td>{{$clt->sexo}}</td>
                 <td>{{$clt->idade}}</td>
                 <td>{{$clt->endereco}}</td>
@@ -51,4 +51,19 @@
         <!-- DADOS [FIM] -->
     </table>
 </div>
+
+
+@push('javascript')
+<script src="{{asset('assets/js/jquery.mask.js')}}"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.date').mask('00/00/0000');
+        $('.time').mask('00:00');
+        $('.phone').mask('00000-0000');
+        $('.cpf').mask('000.000.000-00', {reverse: true});
+    });
+</script>
+
+@endpush
 @endsection

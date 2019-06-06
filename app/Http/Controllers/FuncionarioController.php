@@ -27,7 +27,11 @@ class FuncionarioController extends Controller
         
         public function alterar(Request $request, $id){
             $this->validarFuncionario($request);
-            Funcionario::where('id',$id)->update($request->except(['confirmarEmail','confirmarSenha','_token']));;
+            $dados = $request->except(['confirmarEmail','confirmarSenha','_token']);
+            $dados['telefone'] = str_replace('-', '', $dados['telefone']);
+            $dados['cpf'] = str_replace('-', '', $dados['cpf']);
+            $dados['cpf'] = str_replace('.', '', $dados['cpf']);
+            Funcionario::where('id',$id)->update($dados);
             return redirect()->route('funcionario');
         }
         
@@ -39,7 +43,11 @@ class FuncionarioController extends Controller
         
         public function novo(Request $request){
             $this->validarFuncionario($request);
-            Funcionario::create($request->except(['confirmarEmail','confirmarSenha','_token']));
+            $dados = $request->except(['confirmarEmail','confirmarSenha','_token']);
+            $dados['telefone'] = str_replace('-', '', $dados['telefone']);
+            $dados['cpf'] = str_replace('-', '', $dados['cpf']);
+            $dados['cpf'] = str_replace('.', '', $dados['cpf']);
+            Funcionario::create($dados);
             return redirect()->route('funcionario');
         }
         
@@ -51,7 +59,7 @@ class FuncionarioController extends Controller
                 'confirmarEmail' => [function ($att, $value, $fail) use ($request) {
                     if($value != $request->email) $fail('Confirme seu email corretamente');
                 }],
-                'telefone'   => 'required|integer',
+                'telefone'   => 'required',
                 'sexo'       => 'required',
                 'idade'   => 'required|integer',
                 'senha'   => 'required',
