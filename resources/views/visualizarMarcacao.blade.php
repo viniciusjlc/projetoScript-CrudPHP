@@ -21,6 +21,7 @@
                 <th>Data</th>
                 <th>Horario</th>
                 <th>Funcionario</th>
+                <th>Status</th>
                 <th id="coluna-acao">Ações</th>
             </tr>
         </thead>
@@ -33,9 +34,12 @@
                 <td align="center">{{date('d/m/Y', strtotime($marcacao['data']))}}</td>
                 <td align="center">{{$marcacao['horario']}}</td>
                 <td>{{$marcacao->funcionario->nome}}</td>
-                <td align="center">      
+                <td>{{$marcacao->status}}</td>
+                <td align="center"> 
                     <button type="button" onclick="window.location.href='{{route('marcacao.alterar', ['id'=>$marcacao->id])}}'" class="btn btn-default">Alterar</button>
                     <button type="button" onclick="window.location.href='{{route('marcacao.excluir', ['id'=>$marcacao->id])}}'" class="btn btn-default">Excluir</button>
+                    <button type="button" class="btn btn-default">Executar</button>
+                    <button type="button" class="btn btn-default">Cancelar</button>
                 </td>
             </tr>	
             @endforeach	 

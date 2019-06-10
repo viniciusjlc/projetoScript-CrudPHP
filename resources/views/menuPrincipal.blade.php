@@ -13,6 +13,7 @@
                 <th>Data</th>
                 <th>Horario</th>
                 <th>Funcionario</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 <td align="center">{{date('d/m/Y', strtotime($marcacao['data']))}}</td>
                 <td align="center">{{$marcacao['horario']}}</td>
                 <td>{{$marcacao->funcionario->nome}}</td>
+                <td>{{$marcacao->status}}</td>
             </tr>	
             @endforeach	 
         </tbody>
